@@ -22,7 +22,7 @@ OrionLib:MakeNotification({
 	Name = "Credit",
 	Content = "By: Cataihub",
 	Image = "rbxassetid://4483345998",
-	Time = 5
+	Time = 3.2
 })
 
 
