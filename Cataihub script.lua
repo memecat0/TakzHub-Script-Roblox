@@ -35,11 +35,17 @@ local Section = Tab:AddSection({
 	Name = "LocalPlayer"
 })
 
-Tab:AddButton({
-	Name = "Walkspeed Fast!",
-	Callback = function()
-      		player.Character.Humanoid.Walkspeed = 200
-  	end    
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 16,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "WS",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
+	end    
 })
 
 OrionLib:Init()
