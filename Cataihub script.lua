@@ -51,4 +51,17 @@ Tab:AddSlider({
 	end    
 })
 
+Tab:AddSlider({
+	Name = "Jump Heights",
+	Min = 50,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Heights",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+	end    
+})
+
 OrionLib:Init()
