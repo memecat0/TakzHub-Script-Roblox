@@ -1,8 +1,8 @@
-local player = game.Players.LocalPlayer
+-- Cataihub Script Hub
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Cataihub GUI V0.5", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Cataihub GUI V1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
 	Name = "Hey!",
@@ -25,14 +25,16 @@ OrionLib:MakeNotification({
 	Time = 5
 })
 
+-- player tab 
+
 local Tab = Window:MakeTab({
-	Name = "Local Player",
+	Name = "Player",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "LocalPlayer"
+	Name = "Movement"
 })
 
 Tab:AddSlider({
