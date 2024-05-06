@@ -54,7 +54,7 @@ Tab:AddSlider({
 Tab:AddSlider({
 	Name = "Jump Heights",
 	Min = 50,
-	Max = 500,
+	Max = 250,
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
