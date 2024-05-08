@@ -47,6 +47,9 @@ local Section = Tab:AddSection({
 
 Tab:AddLabel("Update log")
 
+Tab:AddLabel("New Cataihub Yield Fe")
+
+
 
 -- player tab 
 
@@ -86,13 +89,6 @@ Tab:AddSlider({
 	end    
 })
 
-Tab:AddButton({
-	Name = "Fly Gui v3.2",
-	Callback = function()
-      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/Fly-gui-v3/main/Fly%20gui%20v3'))()
-  	end    
-})
-
 
 -- Script tab 
 
@@ -104,6 +100,20 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "Script Execute"
+})
+
+Tab:AddButton({
+	Name = "Cataihub Yield FE (New)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Cataihub-yield/main/Cataihub%20yield%20FE')))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fly Gui v3.2",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/Fly-gui-v3/main/Fly%20gui%20v3'))()
+  	end    
 })
 
 Tab:AddButton({
