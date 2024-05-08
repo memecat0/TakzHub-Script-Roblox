@@ -26,6 +26,21 @@ OrionLib:MakeNotification({
 })
 
 
+-- Update log tab 
+
+local Tab = Window:MakeTab({
+	Name = "Update log",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Update log"
+})
+
+Tab:AddLabel("Update log")
+
+
 -- player tab 
 
 local Tab = Window:MakeTab({
