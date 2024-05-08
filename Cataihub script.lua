@@ -47,7 +47,7 @@ local Section = Tab:AddSection({
 
 Tab:AddLabel("Cataihub Gui | Update v1.4.2")
 
-Tab:AddLabel("New Cataihub Yield Fe")
+Tab:AddLabel("New Cataihub Yield FE")
 
 
 
