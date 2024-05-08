@@ -45,9 +45,11 @@ local Section = Tab:AddSection({
 	Name = "Update log"
 })
 
-Tab:AddLabel("Cataihub Gui | Update v1.4.2")
+Tab:AddLabel("Cataihub Gui | Update v1.4.5")
 
 Tab:AddLabel("New Cataihub Yield FE")
+
+Tab:AddLabel("New Headless Korblox")
 
 
 
@@ -87,6 +89,13 @@ Tab:AddSlider({
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
+})
+
+Tab:AddButton({
+	Name = "Headless Korblox FE (New)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Headless-Korblox/main/Headless%20korblox%20Fe')))()
+  	end    
 })
 
 
