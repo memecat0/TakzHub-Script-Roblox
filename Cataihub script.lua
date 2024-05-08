@@ -91,4 +91,11 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Script Football Funsion 2",
+	Callback = function()
+      		loadstring(game:HttpGet"https://raw.githubusercontent.com/LOLking123456/fnieoi/main/dwqfewg")()
+  	end    
+})
+
 OrionLib:Init()
