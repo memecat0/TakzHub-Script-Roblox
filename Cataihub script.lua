@@ -5,15 +5,22 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Cataihub Gui v1.2", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
-	Name = "Hey!",
-	Content = "you are is welcome!",
-	Image = "rbxassetid://4483345998",
+	Name = "Cataihub Gui script",
+	Content = "New Script 5/7/2024",
+	Image = "rbxassetid://17424383817",
 	Time = 1
 })
 
 OrionLib:MakeNotification({
-	Name = "Subscribe!",
-	Content = "you is check Youtube Channel: Cataihub!",
+	Name = "Welcome!",
+	Content = "You are is this welcome!",
+	Image = "rbxassetid://17424414487",
+	Time = 1
+})
+
+OrionLib:MakeNotification({
+	Name = "Check Youtube Channel!",
+	Content = "Youtube Channel: Cataihub!",
 	Image = "rbxassetid://4483345998",
 	Time = 3
 })
