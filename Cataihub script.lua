@@ -94,7 +94,7 @@ Tab:AddSlider({
 
 local Tab = Window:MakeTab({
 	Name = "Script",
-	Icon = "rbxassetid://17424521055",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
