@@ -45,7 +45,7 @@ Tab:AddSlider({
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "WS",
+	ValueName = "walkspeed",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.Walkspeed = Value
 	end    
@@ -62,6 +62,13 @@ Tab:AddSlider({
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
 	end    
+})
+
+Tab:AddButton({
+	Name = "Fly Gui v3.2",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/Fly-gui-v3/main/Fly%20gui%20v3'))()
+  	end    
 })
 
 
