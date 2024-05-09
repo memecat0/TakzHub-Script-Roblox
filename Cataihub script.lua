@@ -8,28 +8,28 @@ OrionLib:MakeNotification({
 	Name = "Cataihub Gui script",
 	Content = "New Script 5/7/2024",
 	Image = "rbxassetid://17424383817",
-	Time = 1
+	Time = 0.5
 })
 
 OrionLib:MakeNotification({
 	Name = "Welcome!",
 	Content = "You are is this welcome!",
 	Image = "rbxassetid://17424414487",
-	Time = 1
+	Time = 0.65
 })
 
 OrionLib:MakeNotification({
 	Name = "Check Youtube Channel!",
 	Content = "Youtube Channel: Cataihub!",
 	Image = "rbxassetid://4483345998",
-	Time = 3
+	Time = 0.75
 })
 
 OrionLib:MakeNotification({
 	Name = "Credit",
 	Content = "By: Cataihub",
 	Image = "rbxassetid://4483345998",
-	Time = 3.2
+	Time = 1
 })
 
 
