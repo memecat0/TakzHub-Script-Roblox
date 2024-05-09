@@ -56,7 +56,7 @@ Tab:AddLabel("New Headless Korblox")
 -- player tab 
 
 local Tab = Window:MakeTab({
-	Name = "Player",
+	Name = "Movement Player",
 	Icon = "rbxassetid://2795572803",
 	PremiumOnly = false
 })
@@ -91,13 +91,6 @@ Tab:AddSlider({
 	end    
 })
 
-Tab:AddButton({
-	Name = "Headless Korblox FE (New)",
-	Callback = function()
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Headless-Korblox/main/Headless%20korblox%20Fe')))()
-  	end    
-})
-
 
 
 -- Script tab 
@@ -110,6 +103,13 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "Script Execute"
+})
+
+Tab:AddButton({
+	Name = "Headless Korblox FE (New)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Headless-Korblox/main/Headless%20korblox%20Fe')))()
+  	end    
 })
 
 Tab:AddButton({
