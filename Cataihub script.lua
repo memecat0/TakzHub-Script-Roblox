@@ -57,7 +57,7 @@ Tab:AddLabel("New Headless Korblox")
 
 local Tab = Window:MakeTab({
 	Name = "Player",
-	Icon = "rbxassetid://4483345998",
+	Icon = "rbxassetid://2795572803",
 	PremiumOnly = false
 })
 
