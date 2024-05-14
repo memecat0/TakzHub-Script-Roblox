@@ -7,14 +7,14 @@ local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium =
 OrionLib:MakeNotification({
 	Name = "Cat Hub Gui script",
 	Content = "New Script 5/7/2024",
-	Image = "rbxassetid://17424383817",
+	Image = "rbxassetid://4483345998",
 	Time = 0.5
 })
 
 OrionLib:MakeNotification({
 	Name = "Welcome!",
 	Content = "You are is this welcome!",
-	Image = "rbxassetid://17424414487",
+	Image = "rbxassetid://4483345998",
 	Time = 0.65
 })
 
@@ -57,7 +57,7 @@ Tab:AddLabel("New Headless Korblox")
 
 local Tab = Window:MakeTab({
 	Name = "Movement Player",
-	Icon = "rbxassetid://2795572803",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
@@ -103,6 +103,13 @@ local Tab = Window:MakeTab({
 
 local Section = Tab:AddSection({
 	Name = "Script Execute"
+})
+
+Tab:AddButton({
+	Name = "Cat Hub Yeet troll fe",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/CatHubTrollyeet/main/CatHubTrollyeet')))()
+  	end    
 })
 
 Tab:AddButton({
