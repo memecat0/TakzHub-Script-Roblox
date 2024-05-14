@@ -116,9 +116,9 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Cat Hub Yield FE",
+	Name = "infinite yield FE",
 	Callback = function()
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Cataihub-yield/main/Cataihub%20yield%20FE')))()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   	end    
 })
 
