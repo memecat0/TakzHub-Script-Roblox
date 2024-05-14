@@ -2,10 +2,10 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "CataiHub Gui", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 OrionLib:MakeNotification({
-	Name = "Cataihub Gui script",
+	Name = "Cat Hub Gui script",
 	Content = "New Script 5/7/2024",
 	Image = "rbxassetid://17424383817",
 	Time = 0.5
@@ -20,14 +20,14 @@ OrionLib:MakeNotification({
 
 OrionLib:MakeNotification({
 	Name = "Check Youtube Channel!",
-	Content = "Youtube Channel: Cataihub!",
+	Content = "Youtube Channel: Cat Hub!",
 	Image = "rbxassetid://4483345998",
 	Time = 0.75
 })
 
 OrionLib:MakeNotification({
 	Name = "Credit",
-	Content = "By: Cataihub",
+	Content = "By: Memecat0",
 	Image = "rbxassetid://4483345998",
 	Time = 1
 })
@@ -106,14 +106,14 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Headless Korblox FE (New)",
+	Name = "Headless Korblox FE",
 	Callback = function()
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Headless-Korblox/main/Headless%20korblox%20Fe')))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "Cataihub Yield FE (New)",
+	Name = "Cat Hub Yield FE",
 	Callback = function()
       		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Cataihub-yield/main/Cataihub%20yield%20FE')))()
   	end    
@@ -123,13 +123,6 @@ Tab:AddButton({
 	Name = "Fly Gui v3.2",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/Fly-gui-v3/main/Fly%20gui%20v3'))()
-  	end    
-})
-
-Tab:AddButton({
-	Name = "Script Prison Life Cataihub GUI",
-	Callback = function()
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Prison-life-Script-Gui-Cataihub/main/Prison%20life%20Cataihub%20script')))()
   	end    
 })
 
