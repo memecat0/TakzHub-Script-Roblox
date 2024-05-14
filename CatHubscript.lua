@@ -45,11 +45,7 @@ local Section = Tab:AddSection({
 	Name = "Update log"
 })
 
-Tab:AddLabel("Cataihub Gui | Update v1.4.5")
-
-Tab:AddLabel("New Cataihub Yield FE")
-
-Tab:AddLabel("New Headless Korblox")
+Tab:AddLabel("Cat Hub Gui | Update v1.4.5")
 
 
 
@@ -115,7 +111,7 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Headless Korblox FE",
 	Callback = function()
-      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/Cataihub/Headless-Korblox/main/Headless%20korblox%20Fe')))()
+      		loadstring(game:HttpGet('https://pastebin.com/raw/H5yx10Jq'))()
   	end    
 })
 
