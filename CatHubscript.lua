@@ -136,4 +136,11 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "loadstring(game:HttpGet("OP HUB | Blade ball",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/FwmeAj/FwmeAj/main/Blade%20ball%20protection"))()
+  	end    
+})
+
 OrionLib:Init()
