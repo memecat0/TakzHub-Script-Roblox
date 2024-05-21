@@ -169,7 +169,7 @@ Tab:AddButton({
 Tab:AddButton({
     Name = "Fly Gui v3 FE",
     Callback = function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/FLYGUIV3/main/Flyguiv3'))()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/Cataihub/FLYGUIV3/main/Flyguiv3.lua'))()
     end    
 })
 
