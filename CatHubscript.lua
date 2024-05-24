@@ -29,13 +29,13 @@ end)
 
 
 --//tab
-local Tab = Window.NewTab("Test")
+local Tab = Window.NewTab("Blox Fruit 🍎")
 
 
 --//section
-local Section = Tab.NewSection("Test")
+local Section = Tab.NewSection("Scripts | Blox fruit")
 
 --// Button
-local Button = Section.NewButton("Console check",function()
-print("test")
+local Button = Section.NewButton("RedzHub (old)",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
