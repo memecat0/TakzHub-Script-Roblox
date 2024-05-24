@@ -21,3 +21,21 @@ local Tab = Window.NewTab("Blade Ball 🔴")
 
 --//section
 local Section = Tab.NewSection("Scripts | Balde ball")
+
+--// Button
+local Button = Section.NewButton("Button Text",function()
+-- code here
+end)
+
+
+--//tab
+local Tab = Window.NewTab("Test")
+
+
+--//section
+local Section = Tab.NewSection("Test")
+
+--// Button
+local Button = Section.NewButton("Console check",function()
+print("test")
+end)
