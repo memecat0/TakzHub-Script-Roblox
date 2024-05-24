@@ -24,7 +24,7 @@ local Section = Tab.NewSection("Scripts | Balde ball")
 
 --// Button
 local Button = Section.NewButton("Button Text",function()
--- code here
+loadstring(game:HttpGet("https://raw.githubusercontent.com/FwmeAj/FwmeAj/main/Blade%20ball%20protection"))()
 end)
 
 
