@@ -36,6 +36,6 @@ local Tab = Window.NewTab("Blox Fruit 🍎")
 local Section = Tab.NewSection("Scripts | Blox fruit")
 
 --// Button
-local Button = Section.NewButton("RedzHub (old)",function()
+local Button = Section.NewButton("RedzHub | Blox fruit",function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
