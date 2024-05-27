@@ -23,8 +23,8 @@ local Tab = Window.NewTab("Blade Ball 🔴")
 local Section = Tab.NewSection("Scripts | Balde ball")
 
 --// Button
-local Button = Section.NewButton("Button Text",function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/FwmeAj/FwmeAj/main/Blade%20ball%20protection"))()
+local Button = Section.NewButton("Auto parry OP | Blade ball",function()
+loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-Blade-Ball-op-autoparry-with-visualizer-8652"))()
 end)
 
 
