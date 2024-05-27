@@ -1,9 +1,6 @@
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local Window = Library.CreateLib("TITLE", "DarkTheme")
+local Window = Library.CreateLib("Cat Hub v0.5", "GrapeTheme")
 
-local Tab = Window:NewTab("Test")
-local Section = Tab:NewSection("TEST LOL")
+local Tab = Window:NewTab("main")
+local Section = Tab:NewSection("main")
 
-Section:NewButton("test", "test", function()
-    print("hello world")
-end)
