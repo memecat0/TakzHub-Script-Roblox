@@ -32,12 +32,14 @@ Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
-Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+Section:NewButton("Blox fruit | Master", "like its good", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
 end)
 
-Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+Section:NewButton("Blox fruit | YMIE", "like its good", function()
+    getgenv().Team = "Pirates"
+getgenv().id = "1226743840325501060"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NhiYeuAnh/YMIE-HUB/main/YMIEHUBV2.txt"))()
 end)
 
 Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
