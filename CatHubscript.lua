@@ -31,3 +31,15 @@ Section:NewLabel("Blox fruit 🍎")
 Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
+
+Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+end)
+
+Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+end)
+
+Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+end)
