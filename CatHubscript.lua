@@ -25,3 +25,9 @@ end)
 
 local Tab = Window:NewTab("Scripts")
 local Section = Tab:NewSection("Game of scripts")
+
+Section:NewLabel("Blox fruit 🍎")
+
+Section:NewButton("Redz Hub", "like its good", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+end)
