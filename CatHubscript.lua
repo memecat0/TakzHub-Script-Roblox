@@ -42,6 +42,7 @@ getgenv().id = "1226743840325501060"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NhiYeuAnh/YMIE-HUB/main/YMIEHUBV2.txt"))()
 end)
 
-Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+Section:NewButton("Blox fruit | AIMBOT", "like its good", function()
+    _G.Aimbot = true
+loadstring(game:HttpGet("https://alchemyhub.xyz/n.g"))()
 end)
