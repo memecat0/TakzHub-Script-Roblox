@@ -16,3 +16,12 @@ local Section = Tab:NewSection("main")
 Section:NewSlider("WalkSpeed", "too faster!", 350, 0, function(s) -- 350 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
+
+Section:NewButton("infinite yield", "cool infyield", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+
+
+local Tab = Window:NewTab("Scripts")
+local Section = Tab:NewSection("Game of scripts")
