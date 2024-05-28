@@ -13,3 +13,6 @@ Section:NewLabel("Helper to alexhub")
 local Tab = Window:NewTab("main")
 local Section = Tab:NewSection("main")
 
+Section:NewSlider("WalkSpeed", "too faster!", 350, 0, function(s) -- 350 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
