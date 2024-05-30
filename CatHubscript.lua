@@ -32,17 +32,22 @@ Section:NewButton("Blox fruit | Redz Hub", "like its good", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
-Section:NewButton("Blox fruit | Master", "like its good", function()
+Section:NewButton("Blox fruit | Master", "it cuz loading so bad too", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/onepicesenpai/onepicesenpai/main/onichanokaka'))()
 end)
 
-Section:NewButton("Blox fruit | YMIE", "like its good", function()
+Section:NewButton("Blox fruit | YMIE", "its like this YMIE GUI blox fruit good.", function()
     getgenv().Team = "Pirates"
 getgenv().id = "1226743840325501060"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NhiYeuAnh/YMIE-HUB/main/YMIEHUBV2.txt"))()
 end)
 
-Section:NewButton("Blox fruit | AIMBOT", "like its good", function()
-    _G.Aimbot = true
-loadstring(game:HttpGet("https://alchemyhub.xyz/n.g"))()
+Section:NewButton("Blox fruit | AIMBOT", "AIMBOT IS THIS LIKE THAT KILL BOUNTY!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GalaxyTeamHub/Galaxy-Hub/main/GalaxyBloxFruit.lua"))()
+end)
+
+Section:NewLabel("King legacy 🗡")
+
+Section:NewButton("King Legacy | ZEE", "its like that good?", function()
+loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
 end)
