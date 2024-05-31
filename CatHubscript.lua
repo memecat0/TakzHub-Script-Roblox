@@ -7,6 +7,8 @@ local Section = Tab:NewSection("first to credit!")
 
 Section:NewLabel("Owner to memecat0")
 Section:NewLabel("Helper to alexhub")
+Section:NewLabel("Scripts to Roblox Scripts")
+Section:NewLabel("he is thank you Roblox Scripts!")
 
 
 
