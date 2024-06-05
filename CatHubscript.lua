@@ -23,6 +23,11 @@ Section:NewButton("infinite yield", "cool infyield", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+Section:NewButton("troll fling Gui", "ButtonInfo", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/CatHub027/CatHubTrollyeet/main/CatHubTrollyeet'))()
+end)
+
+
 
 
 local Tab = Window:NewTab("Scripts")
