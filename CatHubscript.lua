@@ -21,10 +21,6 @@ Toggle.Draggable = true
 local isOpen = false
 
 Toggle.MouseButton1Click:Connect(function()
-if isOpen then
-Toggle.Text = "Open"
-isOpen = false
-else
 Toggle.Text = "Close"
 isOpen = true
 end
