@@ -22,21 +22,6 @@ local Corner = Instance.new("UICorner")
 Corner.Name = "Corner"
 Corner.Parent = Toggle
 
-local isOpen = false
-
-Toggle.MouseButton1Click:Connect(function()
-if isOpen then
-Toggle.Text = "Open"
--- Code to close the tutorial UI
-isOpen = false
-else
-Toggle.Text = "Close"
--- Code to open the tutorial UI
-isOpen = true
-end
-Library:ToggleUI()
-end)
-
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("first to credit!")
 
