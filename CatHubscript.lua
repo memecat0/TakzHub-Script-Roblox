@@ -26,7 +26,12 @@ Section:NewButton("troll fling Gui", "ButtonInfo", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/CatHub027/CatHubTrollyeet/main/CatHubTrollyeet'))()
 end)
 
+local Tab = Window:NewTab("DropDown")
+local Section = Tab:NewSection("Test")
 
+Section:NewDropdown("DropdownText", "DropdownInf", {"Option 1", "Option 2", "Option 3"}, function(currentOption)
+    print(currentOption)
+end)
 
 
 local Tab = Window:NewTab("Scripts")
