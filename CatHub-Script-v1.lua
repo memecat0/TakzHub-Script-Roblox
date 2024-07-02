@@ -15,16 +15,21 @@ local Button = Section.NewButton("Owner: Cat Hub",function()
 end)
 
 
+--// Button
+local Button = Section.NewButton("Admin Respect: ???",function()
+end)
+
+
 
 --//tab
-local Tab = Window.NewTab("Your Tab Text")
+local Tab = Window.NewTab("Main")
 
 
 --//section
-local Section = Tab.NewSection("Section Text")
+local Section = Tab.NewSection("Main")
 
 
 --// Button
-local Button = Section.NewButton("Button Text",function()
+local Button = Section.NewButton("infinite yield",function()
 -- code here
 end)
