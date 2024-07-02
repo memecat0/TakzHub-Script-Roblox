@@ -31,5 +31,5 @@ local Section = Tab.NewSection("Main")
 
 --// Button
 local Button = Section.NewButton("infinite yield",function()
--- code here
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
