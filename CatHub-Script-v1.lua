@@ -5,7 +5,14 @@ OrionLib:MakeNotification({
 	Name = "welcome to cat hub!",
 	Content = "thanks its execute script cat hub!",
 	Image = "rbxassetid://4483345998",
-	Time = 2
+	Time = 4
+})
+
+OrionLib:MakeNotification({
+	Name = "Discord Seever",
+	Content = "discord server here: https://discord.gg/M4RSUWA5pp",
+	Image = "rbxassetid://4483345998",
+	Time = 3
 })
 
 local Tab = Window:MakeTab({
