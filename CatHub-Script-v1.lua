@@ -25,23 +25,23 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddToggle({
-	Name = "This is a toggle!",
-	Default = false,
-	Callback = function(Value)
-		local player = game.Players.LocalPlayer
-local character = player.Character
-			local function jump()
-    character.Humanoid.JumpPower = 50
-    wait(0.1)
-    character.Humanoid.JumpPower = 0
-end
-			while true do
-    -- Check if the player is on the ground
-    if character.Humanoid.Floor Material == Enum.Material.Air then
-        jump()
-    end
-    wait(0.1)
-end
-	end    
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Button!",
+	Callback = function()
+      		print("button pressed")
+  	end    
 })
