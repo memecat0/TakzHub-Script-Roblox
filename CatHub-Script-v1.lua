@@ -19,7 +19,7 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "Button!",
+	Name = "infinite yield",
 	Callback = function()
       	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   	end    
