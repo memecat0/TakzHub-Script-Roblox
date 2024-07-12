@@ -14,7 +14,7 @@ Section:NewLabel("he is thank you Roblox Scripts!")
 local Tab = Window:NewTab("main")
 local Section = Tab:NewSection("main")
 
-Section:NewSlider("WalkSpeed", "too faster!", 10000000000000000000000, 16, function(s) -- 350 (MaxValue) | 0 (MinValue)
+Section:NewSlider("WalkSpeed", "too faster!", 100000000000000000000000000, 16, function(s) -- 350 (MaxValue) | 0 (MinValue)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
