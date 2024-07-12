@@ -16,6 +16,20 @@ OrionLib:MakeNotification({
 })
 
 local Tab = Window:MakeTab({
+	Name = "Credit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Credit first."
+})
+
+Tab:AddLabel("Owner to Discord on memecat0")
+
+Tab:AddLabel("???")
+
+local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
