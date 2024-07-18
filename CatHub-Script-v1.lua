@@ -39,6 +39,7 @@ local Section = Tab:AddSection({
 	Name = "Main"
 })
 
+
 Tab:AddButton({
 	Name = "infinite yield",
 	Callback = function()
@@ -46,28 +47,19 @@ Tab:AddButton({
   	end    
 })
 
+
 Tab:AddSlider({
 	Name = "Walkspeed",
-	Min = 200,
-	Max = 16,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
+	Min = 16, -- The minimum walkspeed value
+	Max = 200, -- The maximum walkspeed value
+	Default = 16, -- The default walkspeed value
+	Color = Color3.fromRGB(255, 255, 255),
 	Increment = 1,
 	ValueName = "WS",
 	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
-	end    
-})
-
-Tab:AddSlider({
-	Name = "Jumppower",
-	Min = 200,
-	Max = 16,
-	Default = 16,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "JP",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.Jumppower = value
+		local player = game.Players.LocalPlayer
+		if player and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+			player.Character.Humanoid.WalkSpeed = Value
+		end
 	end    
 })
