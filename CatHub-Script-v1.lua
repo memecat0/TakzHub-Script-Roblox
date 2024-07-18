@@ -69,6 +69,22 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddLabel("Who this is chnage team?")
+
+Tab:AddButton({
+	Name = "Change to Pirates",
+	Callback = function()
+      		getgenv().Team = "Pirates"
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Change to Marines",
+	Callback = function()
+      		getgenv().Team = "Marines"
+  	end    
+})
+
 
 
 local Tab = Window:MakeTab({
