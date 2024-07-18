@@ -52,21 +52,19 @@ Tab:AddButton({
 
 
 local Tab = Window:MakeTab({
-	Name = "Blox Fruit",
+	Name = "Blox Fruit Script",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "First its Script."
+	Name = "Blox Fruit its this Script!"
 })
 
-Tab:AddLabel("Who its change flag")
-
 Tab:AddButton({
-	Name = "Change to Pirates",
+	Name = "RedzHub Script",
 	Callback = function()
-      		player.Team = game.Teams.Pirates
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
   	end    
 })
 
