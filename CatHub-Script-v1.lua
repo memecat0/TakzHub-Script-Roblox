@@ -69,4 +69,42 @@ Tab:AddButton({
   	end    
 })
 
+
+
+local Tab = Window:MakeTab({
+	Name = "King legacy Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "King legacy its this Script!"
+})
+
+Tab:AddButton({
+	Name = "Zee Hub Script",
+	Callback = function()
+      		loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
+  	end    
+})
+
+
+
+local Tab = Window:MakeTab({
+	Name = "Blox Fruit Script",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Blox Fruit its this Script!"
+})
+
+Tab:AddButton({
+	Name = "RedzHub Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
 OrionLib:Init()
