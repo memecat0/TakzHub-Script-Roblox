@@ -91,19 +91,19 @@ Tab:AddButton({
 
 
 local Tab = Window:MakeTab({
-	Name = "Blox Fruit Script",
+	Name = "Blade ball Script",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Blox Fruit its this Script!"
+	Name = "Blade ball its this Script!"
 })
 
 Tab:AddButton({
-	Name = "RedzHub Script",
+	Name = "GPLLP BLADE BALL Script",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/songolasangkatangw/memek/main/adakontolsamamemek.lua"))()
   	end    
 })
 
