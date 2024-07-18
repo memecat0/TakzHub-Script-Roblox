@@ -15,32 +15,6 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 
--- LocalScript
-
--- Define the ScreenGui and its elements
-local screenGui = script.Parent:WaitForChild("ScreenGui")
-local toggleKey = Enum.KeyCode.RightShift
-local userInputService = game:GetService("UserInputService")
-
--- Function to toggle the visibility of the ScreenGui
-local function toggleGui()
-    screenGui.Enabled = not screenGui.Enabled
-end
-
--- Function to handle key input
-local function onInput(input, gameProcessedEvent)
-    if gameProcessedEvent then
-        return
-    end
-
-    if input.KeyCode == toggleKey then
-        toggleGui()
-    end
-end
-
--- Connect the input function to UserInputService
-userInputService.InputBegan:Connect(onInput)
-
 
 local Tab = Window:MakeTab({
 	Name = "Credit",
