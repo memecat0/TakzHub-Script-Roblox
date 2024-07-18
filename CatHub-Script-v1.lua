@@ -50,23 +50,6 @@ Tab:AddButton({
 })
 
 
-Tab:AddSlider({
-	Name = "Walkspeed",
-	Min = 200, -- The minimum walkspeed value
-	Max = 16, -- The maximum walkspeed value
-	Default = 0, -- The default walkspeed value
-	Color = Color3.fromRGB(255, 255, 255),
-	Increment = 1,
-	ValueName = "WS",
-	Callback = function(Value)
-		local player = game.Players.LocalPlayer
-		if player and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
-			player.Character.Humanoid.WalkSpeed = Value
-		end
-	end    
-})
-
-
 
 local Tab = Window:MakeTab({
 	Name = "Blox Fruit",
@@ -80,23 +63,11 @@ local Section = Tab:AddSection({
 
 Tab:AddLabel("Who its change flag")
 
-Tab1:AddToggle({
-    Name = "Marines",
-    Default = true,
-    Save = true,
-    Flag = "Marines"
+Tab:AddButton({
+	Name = "Change to Pirates",
+	Callback = function()
+      		player.Team = game.Teams.Pirates
+  	end    
 })
-
-print(OrionLib.Flags["Marines"].Value) -- prints the value of the toggle.
-
-
-Tab1:AddToggle({
-    Name = "Pirates",
-    Default = true,
-    Save = true,
-    Flag = "Pirates"
-})
-
-print(OrionLib.Flags["Pirates"].Value) -- prints the value of the toggle.
 
 OrionLib:Init()
