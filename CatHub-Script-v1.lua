@@ -75,6 +75,7 @@ Tab:AddButton({
 	Name = "Change to Pirates",
 	Callback = function()
       		getgenv().Team = "Pirates"
+			getgenv().id = "1226743840325501060"
   	end    
 })
 
@@ -82,6 +83,7 @@ Tab:AddButton({
 	Name = "Change to Marines",
 	Callback = function()
       		getgenv().Team = "Marines"
+			getgenv().id = "1226743840325501060"
   	end    
 })
 
