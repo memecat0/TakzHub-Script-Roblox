@@ -15,58 +15,32 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 
--- Create ScreenGui and ImageButton
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+-- LocalScript
 
-local imageButton = Instance.new("ImageButton")
-imageButton.Size = UDim2.new(0, 100, 0, 100)  -- Size of the square (100x100 pixels)
-imageButton.Position = UDim2.new(0.5, -50, 0.5, -50)  -- Center of the screen
-imageButton.Image = "rbxassetid://13903798344"  -- Asset ID
-imageButton.Parent = screenGui
+-- Define the ScreenGui and its elements
+local screenGui = script.Parent:WaitForChild("ScreenGui")
+local toggleKey = Enum.KeyCode.RightShift
+local userInputService = game:GetService("UserInputService")
 
--- Function to toggle visibility
-local function toggleVisibility()
+-- Function to toggle the visibility of the ScreenGui
+local function toggleGui()
     screenGui.Enabled = not screenGui.Enabled
 end
 
--- Listen for RightShift key press
-local userInputService = game:GetService("UserInputService")
-
-userInputService.InputBegan:Connect(function(input, isProcessed)
-    if not isProcessed and input.KeyCode == Enum.KeyCode.RightShift then
-        toggleVisibility()
+-- Function to handle key input
+local function onInput(input, gameProcessedEvent)
+    if gameProcessedEvent then
+        return
     end
-end)
 
--- Drag functionality
-local dragging = false
-local dragStart, startPos
-
-local function update(input)
-    local delta = input.Position - dragStart
-    imageButton.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    if input.KeyCode == toggleKey then
+        toggleGui()
+    end
 end
 
-imageButton.InputBegan:Connect(function(input)
-    if input.UserInputType == Enum.UserInputType.MouseButton1 then
-        dragging = true
-        dragStart = input.Position
-        startPos = imageButton.Position
-        
-        input.Changed:Connect(function()
-            if input.UserInputState == Enum.UserInputState.End then
-                dragging = false
-            end
-        end)
-    end
-end)
+-- Connect the input function to UserInputService
+userInputService.InputBegan:Connect(onInput)
 
-userInputService.InputChanged:Connect(function(input)
-    if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
-        update(input)
-    end
-end)
 
 local Tab = Window:MakeTab({
 	Name = "Credit",
