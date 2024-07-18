@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Cat Hub v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "Cat Hub Script v1"})
+local Window = OrionLib:MakeWindow({Name = "Cat Hub Script v1", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroText = "Cat Hub Script v1"})
 
 OrionLib:MakeNotification({
 	Name = "welcome to cat hub!",
@@ -29,6 +29,7 @@ Tab:AddLabel("Owner to Discord on memecat0")
 
 Tab:AddLabel("???")
 
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -50,9 +51,9 @@ Tab:AddButton({
 
 Tab:AddSlider({
 	Name = "Walkspeed",
-	Min = 16, -- The minimum walkspeed value
-	Max = 200, -- The maximum walkspeed value
-	Default = 16, -- The default walkspeed value
+	Min = 200, -- The minimum walkspeed value
+	Max = 16, -- The maximum walkspeed value
+	Default = 0, -- The default walkspeed value
 	Color = Color3.fromRGB(255, 255, 255),
 	Increment = 1,
 	ValueName = "WS",
@@ -63,3 +64,35 @@ Tab:AddSlider({
 		end
 	end    
 })
+
+
+local Tab = Window:MakeTab({
+	Name = "Blox Fruit",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "First its Script."
+})
+
+Tab:AddLabel("Who its change flag")
+
+Tab1:AddToggle({
+    Name = "Marines",
+    Default = true,
+    Save = true,
+    Flag = "Marines"
+})
+
+print(OrionLib.Flags["Marines"].Value) -- prints the value of the toggle.
+
+
+Tab1:AddToggle({
+    Name = "Pirates",
+    Default = true,
+    Save = true,
+    Flag = "Pirates"
+})
+
+print(OrionLib.Flags["Pirates"].Value) -- prints the value of the toggle.
