@@ -30,6 +30,7 @@ Tab:AddLabel("Owner to Discord on memecat0")
 Tab:AddLabel("???")
 
 
+
 local Tab = Window:MakeTab({
 	Name = "Main",
 	Icon = "rbxassetid://4483345998",
@@ -66,6 +67,7 @@ Tab:AddSlider({
 })
 
 
+
 local Tab = Window:MakeTab({
 	Name = "Blox Fruit",
 	Icon = "rbxassetid://4483345998",
@@ -96,3 +98,5 @@ Tab1:AddToggle({
 })
 
 print(OrionLib.Flags["Pirates"].Value) -- prints the value of the toggle.
+
+OrionLib:Init()
