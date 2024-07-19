@@ -119,9 +119,24 @@ local Section = Tab:AddSection({
 })
 
 Tab:AddButton({
-	Name = "GPLLP BLADE BALL Script",
+	Name = "AUTO PARRY | BLADE BALL Script",
 	Callback = function()
-      		loadstring(game:HttpGet("https://raw.githubusercontent.com/songolasangkatangw/memek/main/adakontolsamamemek.lua"))()
+      		loadstring(game:HttpGet(“https://paste.gg/p/anonymous/1734a4ee207844b994df2f36157afacd/files/1e79ac12fc8a47ef8263d5e9d43b7137/raw”))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Close combat | BLADE BALL Script",
+	Callback = function()
+      		loadstring(game:HttpGet(“https://raw.githubusercontent.com/kidshop4/scriptbladeballk/main/bladeball.lua”))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Bedol | BLADE BALL Script",
+	Callback = function()
+      		_G.UI_Size = 200
+loadstring(game:HttpGet(“https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua”))()
   	end    
 })
 
