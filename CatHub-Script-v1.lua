@@ -9,7 +9,7 @@ OrionLib:MakeNotification({
 })
 
 OrionLib:MakeNotification({
-	Name = "Discord Seever",
+	Name = "Discord Server",
 	Content = "discord server here: https://discord.gg/M4RSUWA5pp",
 	Image = "rbxassetid://4483345998",
 	Time = 3
@@ -98,7 +98,6 @@ Tab:AddButton({
 })
 
 
-
 local Tab = Window:MakeTab({
 	Name = "King legacy Script",
 	Icon = "rbxassetid://4483345998",
@@ -115,7 +114,6 @@ Tab:AddButton({
       		loadstring(game:HttpGet('https://zuwz.me/Ls-Zee-Hub-KL'))()
   	end    
 })
-
 
 
 local Tab = Window:MakeTab({
@@ -149,5 +147,3 @@ Tab:AddButton({
 loadstring(game:HttpGet(“https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua”))()
   	end    
 })
-
-OrionLib:Init()
