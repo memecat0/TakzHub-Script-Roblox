@@ -69,21 +69,31 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddLabel("Who this is chnage team?")
-
 Tab:AddButton({
-	Name = "Change to Pirates",
+	Name = "RedzHub Script",
 	Callback = function()
-      		getgenv().Team = "Pirates"
-			getgenv().id = "1226743840325501060"
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "Change to Marines",
+	Name = "RedzHub Script",
 	Callback = function()
-      		getgenv().Team = "Marines"
-			getgenv().id = "1226743840325501060"
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "RedzHub Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "RedzHub Script",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
   	end    
 })
 
