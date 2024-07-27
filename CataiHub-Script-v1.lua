@@ -114,6 +114,39 @@ MainTab:AddButton({
     end
 })
 
+-- Player Movements Tab
+local PlayerMovementsTab = Window:MakeTab({
+    Name = "Player Movements",
+    Icon = "rbxassetid://18678085409",  -- Updated Tab icon asset ID
+    PremiumOnly = false
+})
+
+PlayerMovementsTab:AddSlider({
+    Name = "Walkspeed",
+    Min = 16,
+    Max = 350,
+    Default = Humanoid.WalkSpeed,
+    Color = Color3.fromRGB(255, 0, 0),
+    Increment = 1,
+    ValueName = "Walkspeed",
+    Callback = function(value)
+        Humanoid.WalkSpeed = value
+    end
+})
+
+PlayerMovementsTab:AddSlider({
+    Name = "Jumppower",
+    Min = 50,
+    Max = 250,
+    Default = Humanoid.JumpPower,
+    Color = Color3.fromRGB(0, 255, 0),
+    Increment = 1,
+    ValueName = "Jumppower",
+    Callback = function(value)
+        Humanoid.JumpPower = value
+    end
+})
+
 -- Settings Tab
 local SettingsTab = Window:MakeTab({
     Name = "Settings",
