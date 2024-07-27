@@ -100,14 +100,6 @@ OrionLib:MakeNotification({
 	Time = 2
 })
 
-local CreditsTab = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://18676059123",  -- Updated Tab icon asset ID
-    PremiumOnly = false
-})
-
-CreditsTab:AddLabel("Owner - memecat0 On Roblox Soidjdjc")
-
 -- Main Tab
 local MainTab = Window:MakeTab({
     Name = "Main",
@@ -119,6 +111,32 @@ MainTab:AddButton({
     Name = "Test Button",
     Callback = function()
         print("Test Button clicked")
+    end
+})
+
+MainTab:AddSlider({
+    Name = "Walkspeed Fast",
+    Min = 16,
+    Max = 350,
+    Default = 16,
+    Color = Color3.fromRGB(255, 0, 0),
+    Increment = 1,
+    ValueName = "Walkspeed",
+    Callback = function(value)
+        Humanoid.WalkSpeed = value
+    end
+})
+
+MainTab:AddSlider({
+    Name = "Jumppower",
+    Min = 50,
+    Max = 250,
+    Default = 50,
+    Color = Color3.fromRGB(0, 255, 0),
+    Increment = 1,
+    ValueName = "Jumppower",
+    Callback = function(value)
+        Humanoid.JumpPower = value
     end
 })
 
@@ -177,6 +195,14 @@ ScriptTab:AddButton({
         -- Place any script code you want to execute here
     end
 })
+
+local CreditsTab = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://18676059123",  -- Updated Tab icon asset ID
+    PremiumOnly = false
+})
+
+CreditsTab:AddLabel("Owner - memecat0")
 
 -- Update Log Tab
 local UpdateLogTab = Window:MakeTab({
