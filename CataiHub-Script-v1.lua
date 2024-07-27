@@ -70,17 +70,19 @@ end
 
 -- Function for Anti Lag
 local function activateAntiLag()
-    for _, obj in pairs(workspace:GetDescendants()) do
-        if obj:IsA("BasePart") and obj:IsDescendantOf(workspace) then
-            obj.Material = Enum.Material.SmoothPlastic
-            obj.CastShadow = false
-            if obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
+    -- Use a coroutine to prevent blocking the main thread
+    coroutine.wrap(function()
+        for _, obj in pairs(workspace:GetDescendants()) do
+            if obj:IsA("BasePart") then
+                obj.Material = Enum.Material.SmoothPlastic
+                obj.CastShadow = false
+            elseif obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
                 obj.RenderFidelity = Enum.RenderFidelity.Performance
+            elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") then
+                obj.Enabled = false
             end
-        elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") then
-            obj.Enabled = false
         end
-    end
+    end)()
 end
 
 -- Orion GUI setup
@@ -94,10 +96,10 @@ local Window = OrionLib:MakeWindow({
 })
 
 OrionLib:MakeNotification({
-	Name = "Welcome!",
-	Content = "CataiHub | Thank its you execute!",
-	Image = "rbxassetid://18674254677",
-	Time = 5
+    Name = "Welcome!",
+    Content = "CataiHub | Thank its you execute!",
+    Image = "rbxassetid://18674254677",
+    Time = 5
 })
 
 -- Main Tab
@@ -122,7 +124,7 @@ local ScriptTab = Window:MakeTab({
 })
 
 ScriptTab:AddButton({
-    Name = "RedzHub",
+    Name = "RedzHub | Blox Fruits",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
     end
@@ -143,9 +145,9 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-UpdateLogTab:AddLabel("Update log:")
+UpdateLogTab:AddLabel("Updates (7.0)")
 
-UpdateLogTab:AddLabel("Updates (6.8)")
+UpdateLogTab:AddLabel("Update log:")
 
 UpdateLogTab:AddLabel("Added - Credits")
 
@@ -160,6 +162,8 @@ UpdateLogTab:AddLabel("Added - Anti Lag")
 UpdateLogTab:AddLabel("FIXED - TAB SETTINGS")
 
 UpdateLogTab:AddLabel("Added - TAB DISCORD SERVER")
+
+UpdateLogTab:AddLabel("FIXED - FIXED ANTI-LAG PING")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
