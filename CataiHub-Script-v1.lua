@@ -144,6 +144,10 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+UpdateLogTab:AddLabel("Update log:")
+
+UpdateLogTab:AddLabel("Updates (6.8)")
+
 UpdateLogTab:AddLabel("Added - Credits")
 
 UpdateLogTab:AddLabel("Added - Scripts")
@@ -153,6 +157,10 @@ UpdateLogTab:AddLabel("Added - Fixed Esp highlight")
 UpdateLogTab:AddLabel("Added - Game Supported all.")
 
 UpdateLogTab:AddLabel("Added - Anti Lag")
+
+UpdateLogTab:AddLabel("FIXED - TAB SETTINGS")
+
+UpdateLogTab:AddLabel("Added - TAB DISCORD SERVER")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
