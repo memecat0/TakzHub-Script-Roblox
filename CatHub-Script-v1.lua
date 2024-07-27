@@ -68,6 +68,21 @@ local function toggleESP(state)
     end
 end
 
+-- Function for Anti Lag
+local function activateAntiLag()
+    for _, obj in pairs(workspace:GetDescendants()) do
+        if obj:IsA("BasePart") and obj:IsDescendantOf(workspace) then
+            obj.Material = Enum.Material.SmoothPlastic
+            obj.CastShadow = false
+            if obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
+                obj.RenderFidelity = Enum.RenderFidelity.Performance
+            end
+        elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") then
+            obj.Enabled = false
+        end
+    end
+end
+
 -- Orion GUI setup
 local Window = OrionLib:MakeWindow({
     Name = "CataiHub | Script Hub v1",
@@ -84,6 +99,14 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://18674254677",
 	Time = 2
 })
+
+local CreditsTab = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://18676059123",  -- Updated Tab icon asset ID
+    PremiumOnly = false
+})
+
+CreditsTab:AddLabel("Owner - memecat0 On Roblox Soidjdjc")
 
 -- Main Tab
 local MainTab = Window:MakeTab({
@@ -155,15 +178,14 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-UpdateLogTab:AddLabel("Added - ?")
+UpdateLogTab:AddLabel("Added - Credits")
 
--- Credits Tab
-local CreditsTab = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://18676059123",  -- Updated Tab icon asset ID
-    PremiumOnly = false
-})
+UpdateLogTab:AddLabel("Added - Scripts")
 
-CreditsTab:AddLabel("Owner - memecat0 On Roblox Soidjdjc")
+UpdateLogTab:AddLabel("Added - Fixed Esp highlight")
+
+UpdateLogTab:AddLabel("Added - Game Supported all.")
+
+UpdateLogTab:AddLabel("Added - Anti Lag")
 
 OrionLib:Init()
