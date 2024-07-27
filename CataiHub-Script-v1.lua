@@ -116,16 +116,15 @@ MainTab:AddButton({
 
 -- Script Tab
 local ScriptTab = Window:MakeTab({
-    Name = "Script",
+    Name = "Scripts",
     Icon = "rbxassetid://18675246284",  -- Updated Tab icon asset ID
     PremiumOnly = false
 })
 
 ScriptTab:AddButton({
-    Name = "Test Script",
+    Name = "RedzHub",
     Callback = function()
-        print("Test Script button clicked")
-        -- Place any script code you want to execute here
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
     end
 })
 
