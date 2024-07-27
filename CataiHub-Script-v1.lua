@@ -108,35 +108,9 @@ local MainTab = Window:MakeTab({
 })
 
 MainTab:AddButton({
-    Name = "Test Button",
+    Name = "inf yield",
     Callback = function()
-        print("Test Button clicked")
-    end
-})
-
-MainTab:AddSlider({
-    Name = "Walkspeed Fast",
-    Min = 16,
-    Max = 350,
-    Default = 16,
-    Color = Color3.fromRGB(255, 0, 0),
-    Increment = 1,
-    ValueName = "Walkspeed",
-    Callback = function(value)
-        Humanoid.WalkSpeed = value
-    end
-})
-
-MainTab:AddSlider({
-    Name = "Jumppower",
-    Min = 50,
-    Max = 250,
-    Default = 50,
-    Color = Color3.fromRGB(0, 255, 0),
-    Increment = 1,
-    ValueName = "Jumppower",
-    Callback = function(value)
-        Humanoid.JumpPower = value
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end
 })
 
