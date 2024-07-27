@@ -114,47 +114,6 @@ MainTab:AddButton({
     end
 })
 
--- Settings Tab
-local SettingsTab = Window:MakeTab({
-    Name = "Settings",
-    Icon = "rbxassetid://18674553734",  -- Updated Tab icon asset ID
-    PremiumOnly = false
-})
-
-SettingsTab:AddButton({
-    Name = "Anti Lag",
-    Callback = function()
-        activateAntiLag()
-    end
-})
-
-SettingsTab:AddToggle({
-    Name = "Enable ESP",
-    Default = false,
-    Callback = function(state)
-        toggleESP(state)
-    end
-})
-
-SettingsTab:AddColorpicker({
-    Name = "Highlight Color",
-    Default = HIGHLIGHT_COLOR,
-    Callback = function(color)
-        HIGHLIGHT_COLOR = color
-        if ESP_ENABLED then
-            for _, player in pairs(Players:GetPlayers()) do
-                if player.Character then
-                    for _, obj in pairs(player.Character:GetChildren()) do
-                        if obj:IsA("Highlight") then
-                            obj.FillColor = HIGHLIGHT_COLOR
-                        end
-                    end
-                end
-            end
-        end
-    end
-})
-
 -- Script Tab
 local ScriptTab = Window:MakeTab({
     Name = "Script",
@@ -204,7 +163,48 @@ local DiscordTab = Window:MakeTab({
 DiscordTab:AddButton({
     Name = "Copy Discord Link",
     Callback = function()
-        setclipboard("https://discord.gg/yourserverlink")  -- Replace with your Discord server link
+        setclipboard("https://discord.gg/j8Kdtnz6CA")  -- Replace with your Discord server link
+    end
+})
+
+-- Settings Tab
+local SettingsTab = Window:MakeTab({
+    Name = "Settings",
+    Icon = "rbxassetid://18674553734",  -- Updated Tab icon asset ID
+    PremiumOnly = false
+})
+
+SettingsTab:AddButton({
+    Name = "Anti Lag",
+    Callback = function()
+        activateAntiLag()
+    end
+})
+
+SettingsTab:AddToggle({
+    Name = "Enable ESP",
+    Default = false,
+    Callback = function(state)
+        toggleESP(state)
+    end
+})
+
+SettingsTab:AddColorpicker({
+    Name = "Highlight Color",
+    Default = HIGHLIGHT_COLOR,
+    Callback = function(color)
+        HIGHLIGHT_COLOR = color
+        if ESP_ENABLED then
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character then
+                    for _, obj in pairs(player.Character:GetChildren()) do
+                        if obj:IsA("Highlight") then
+                            obj.FillColor = HIGHLIGHT_COLOR
+                        end
+                    end
+                end
+            end
+        end
     end
 })
 
