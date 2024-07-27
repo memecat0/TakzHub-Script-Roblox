@@ -129,6 +129,13 @@ local SettingsTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+SettingsTab:AddButton({
+    Name = "Anti Lag",
+    Callback = function()
+        activateAntiLag()
+    end
+})
+
 SettingsTab:AddToggle({
     Name = "Enable ESP",
     Default = false,
