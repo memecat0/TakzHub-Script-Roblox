@@ -6,3 +6,31 @@ local tab = DrRayLibrary.newTab("My Tab", "ImageIdHere")
 tab.newButton("click to button", "test!", function()
     print('test!')
 end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
+
+tab.newButton("click to button", "test!", function()
+    print('test!')
+end)
