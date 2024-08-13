@@ -87,7 +87,7 @@ end
 
 -- Orion GUI setup
 local Window = OrionLib:MakeWindow({
-    Name = "CataiHub | iOS Sideloading",
+    Name = "CataiHub | v1",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
