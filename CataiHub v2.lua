@@ -5,9 +5,9 @@ local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
 tab.newToggle("WALKSPEED", "FAST TOO!", true, function(toggleState)
     if toggleState then
-        game.Players.LocalPlayer.Character.Humanoid.walkspeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
     else
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150
     end
 end)
 
