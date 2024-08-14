@@ -3,12 +3,8 @@ local window = DrRayLibrary:Load("CataiHub v2", "Default")
 
 local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
-tab.newToggle("WALKSPEED", "FAST TOO!", true, function(toggleState)
-    if toggleState then
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
-    else
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150
-    end
+tab.newButton("INF YIELD", "FE BUT INF YIELD CMDS +150!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 local tab = DrRayLibrary.newTab("Script", "ImageIdHere")
