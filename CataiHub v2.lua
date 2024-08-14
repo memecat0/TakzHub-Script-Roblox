@@ -3,11 +3,11 @@ local window = DrRayLibrary:Load("CataiHub v2", "Default")
 
 local tab = DrRayLibrary.newTab("Main", "ImageIdHere")
 
-tab.newToggle("Test", "hi", true, function(toggleState)
+tab.newToggle("WALKSPEED", "FAST TOO!", true, function(toggleState)
     if toggleState then
-        print("On")
+        game.Players.LocalPlayer.Character.Humanoid.walkspeed = 16
     else
-        print("Off")
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
     end
 end)
 
