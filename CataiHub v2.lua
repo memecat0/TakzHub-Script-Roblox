@@ -40,3 +40,15 @@ end)
 tab.newButton("click to button", "test!", function()
     print('test!')
 end)
+
+local tab = DrRayLibrary.newTab("Settings", "rbxassetid://18674553734")
+
+tab.newToggle("Toggle", "Toggle! (prints the state)", true, function(toggleState)
+    if toggleState then
+        print("On")
+    else
+        print("Off")
+    end
+end)
+
+local tab = DrRayLibrary.newTab("Discord Server", "rbxassetid://18678198914")
