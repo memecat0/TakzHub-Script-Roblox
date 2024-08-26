@@ -5,7 +5,7 @@ local Window = OrionLib:MakeWindow({
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
-    IntroText = "Legends Of speed Op!"
+    IntroText = "Legends Of speed Op!",
     IntroIcon = "rbxassetid://18674254677"
 })
 
