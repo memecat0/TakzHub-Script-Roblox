@@ -1,12 +1,10 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({
-    Name = "CataiHub | Legends of speeds",
+    Name = "Legends of Speed",
     HidePremium = false,
     SaveConfig = true,
-    ConfigFolder = "OrionTest",
-    IntroText = "Legends Of speed Op!",
-    IntroIcon = "rbxassetid://18674254677"
+    ConfigFolder = "OrionTest"
 })
 
 -- Check user access
@@ -109,89 +107,6 @@ AutoFarm:AddToggle({
     end
 })
 
-local OP_AutoRebirth = false
-local OP_AutoOrbs = false
-local OP_AutoGems = false
-local OP_AutoHoops = false
-
-OP_AutoFarm:AddToggle({
-    Name = "OP Auto Rebirth",
-    Default = false,
-    Callback = function(Value)
-        OP_AutoRebirth = Value
-        if OP_AutoRebirth then
-            while OP_AutoRebirth do
-                wait(5)
-                local args = {"rebirthRequest"}
-                game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
-            end
-        end
-    end
-})
-
-OP_AutoFarm:AddToggle({
-    Name = "OP Orb Farm",
-    Default = false,
-    Callback = function(Value)
-        OP_AutoOrbs = Value
-        if OP_AutoOrbs then
-            while OP_AutoOrbs do
-                wait(0.1)
-                for _, orb in pairs(game.Workspace.orbFolder.City:GetChildren()) do
-                    if orb.Name ~= "Gem" then
-                        orb.outerOrb.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
-            end
-        end
-    end
-})
-
-OP_AutoFarm:AddToggle({
-    Name = "OP Gem Farm",
-    Default = false,
-    Callback = function(Value)
-        OP_AutoGems = Value
-        if OP_AutoGems then
-            while OP_AutoGems do
-                wait(0.1)
-                for _, gem in pairs(game.Workspace.orbFolder.City:GetChildren()) do
-                    if gem.Name == "Gem" then
-                        gem.outerGem.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-                    end
-                end
-            end
-        end
-    end
-})
-
-OP_AutoFarm:AddToggle({
-    Name = "OP Hoop Farm",
-    Default = false,
-    Callback = function(Value)
-        OP_AutoHoops = Value
-        if OP_AutoHoops then
-            while OP_AutoHoops do
-                wait(0.1)
-                local player = game.Players.LocalPlayer
-                local humanoidRootPart = player and player.Character and player.Character:FindFirstChild("HumanoidRootPart")
-                local hoopsFolder = game.Workspace:FindFirstChild("Hoops")
-
-                if humanoidRootPart and hoopsFolder then
-                    for _, hoop in pairs(hoopsFolder:GetChildren()) do
-                        if hoop:IsA("BasePart") then
-                            hoop.CFrame = humanoidRootPart.CFrame
-                        end
-                    end
-                else
-                    warn("Player's HumanoidRootPart or Hoops folder not found.")
-                end
-                wait(0.1)  -- Prevents possible infinite loop strain
-            end
-        end
-    end
-})
-
 AutoFarm:AddButton({
     Name = "Collect All Orbs and Rebirth",
     Callback = function()
@@ -217,18 +132,18 @@ local UltraOP_AutoFarm = Window:MakeTab({
 })
 
 if isUserAllowed then
-    local OP_ultra_AutoRebirth = false
-    local OP_ultra_AutoOrbs = false
-    local OP_ultra_AutoGems = false
-    local OP_ultra_AutoHoops = false
+    local OP_AutoRebirth = false
+    local OP_AutoOrbs = false
+    local OP_AutoGems = false
+    local OP_AutoHoops = false
 
     UltraOP_AutoFarm:AddToggle({
         Name = "Ultra OP Rebirth",
         Default = false,
         Callback = function(Value)
-            OP_ultra_AutoRebirth = Value
-            if OP_ultra_AutoRebirth then
-                while OP_ultra_AutoRebirth do
+            OP_AutoRebirth = Value
+            if OP_AutoRebirth then
+                while OP_AutoRebirth do
                     wait(5)
                     local args = {"rebirthRequest"}
                     game:GetService("ReplicatedStorage").rEvents.rebirthEvent:FireServer(unpack(args))
@@ -241,9 +156,9 @@ if isUserAllowed then
         Name = "Ultra OP Orb Farm",
         Default = false,
         Callback = function(Value)
-            OP_ultra_AutoOrbs = Value
-            if OP_ultra_AutoOrbs then
-                while OP_ultra_AutoOrbs do
+            OP_AutoOrbs = Value
+            if OP_AutoOrbs then
+                while OP_AutoOrbs do
                     wait(0.1)
                     for _, orb in pairs(game.Workspace.orbFolder.City:GetChildren()) do
                         if orb.Name ~= "Gem" then
@@ -259,9 +174,9 @@ if isUserAllowed then
         Name = "Ultra OP Gem Farm",
         Default = false,
         Callback = function(Value)
-            OP_ultra_AutoGems = Value
-            if OP_ultra_AutoGems then
-                while OP_ultra_AutoGems do
+            OP_AutoGems = Value
+            if OP_AutoGems then
+                while OP_AutoGems do
                     wait(0.1)
                     for _, gem in pairs(game.Workspace.orbFolder.City:GetChildren()) do
                         if gem.Name == "Gem" then
@@ -277,9 +192,9 @@ if isUserAllowed then
         Name = "Ultra OP Hoop Farm",
         Default = false,
         Callback = function(Value)
-            OP_ultra_AutoHoops = Value
-            if OP_ultra_AutoHoops then
-                while OP_ultra_AutoHoops do
+            OP_AutoHoops = Value
+            if OP_AutoHoops then
+                while OP_AutoHoops do
                     wait(0.1)
                     local player = game.Players.LocalPlayer
                     local humanoidRootPart = player and player.Character and player.Character:FindFirstChild("HumanoidRootPart")
@@ -329,5 +244,3 @@ DiscordServer:AddButton({
         setclipboard("https://discord.gg/your-server-link")  -- Replace with your Discord server link
     end
 })
-
--- End of Script
