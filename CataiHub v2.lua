@@ -9,8 +9,8 @@ end)
 
 local tab = DrRayLibrary.newTab("Script", "ImageIdHere")
 
-tab.newButton("click to button", "test!", function()
-    print('test!')
+tab.newButton("RedzHub", "RedzHub from Blox fruit games", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
 end)
 
 tab.newButton("click to button", "test!", function()
