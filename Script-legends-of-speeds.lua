@@ -10,6 +10,8 @@ local Window = OrionLib:MakeWindow({
 -- Check user access
 local allowedUsers = {
     ["Soidjdjc"] = true,
+    ["I_LostDoge"] = true,
+    ["Soidjdjc_Sister"] = true,
     ["Cat_okea"] = true,
     ["Catai170"] = true
 }
