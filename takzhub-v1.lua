@@ -228,6 +228,8 @@ UpdateLogTab:AddLabel("Added - our script")
 
 UpdateLogTab:AddLabel("Added - Golden Apple Only game: Break in 2")
 
+UpdateLogTab:AddLabel("Added - TOGGLE AUTO ANTI LAG")
+
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
     Icon = "rbxassetid://18678198914",
@@ -252,6 +254,16 @@ SettingsTab:AddButton({
     Name = "Anti Lag",
     Callback = function()
         activateAntiLag()
+    end
+})
+
+SettingsTab:AddToggle({
+    Name = "Auto Anti Lag",
+    Default = false,
+    Callback = function(state)
+        if state then
+            activateAntiLag()
+        end
     end
 })
 
