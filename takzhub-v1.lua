@@ -1,5 +1,6 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
 
@@ -10,9 +11,9 @@ local function createHighlight(character)
         local highlight = Instance.new("Highlight")
         highlight.Parent = character
         highlight.Adornee = character
-        highlight.FillColor = HIGHLIGHT_COLOR  -- Use selected color
-        highlight.OutlineColor = Color3.new(1, 1, 1)  -- Default white outline
-        highlight.OutlineTransparency = 0  -- Fully visible outline
+        highlight.FillColor = HIGHLIGHT_COLOR
+        highlight.OutlineColor = Color3.new(1, 1, 1)
+        highlight.OutlineTransparency = 0
         highlight.Name = "Highlight" .. i
     end
 end
@@ -79,23 +80,24 @@ local function activateAntiLag()
     end)()
 end
 
-local autoAntiLagEnabled = false
-local function autoAntiLag()
-    while autoAntiLagEnabled do
-        -- Perform Anti-Lag operations in a loop
-        for _, obj in pairs(workspace:GetDescendants()) do
-            if obj:IsA("BasePart") then
-                obj.Material = Enum.Material.SmoothPlastic
-                obj.CastShadow = false
-            elseif obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
-                obj.RenderFidelity = Enum.RenderFidelity.Performance
-            elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") then
-                obj.Enabled = false
-            end
+local function updateFPS()
+    local lastTime = tick()
+    local fpsCounter = 0
+
+    RunService.RenderStepped:Connect(function()
+        fpsCounter = fpsCounter + 1
+        local currentTime = tick()
+        if currentTime - lastTime >= 1 then
+            -- Update the FPS label every second
+            local fps = fpsCounter / (currentTime - lastTime)
+            fpsLabel:Set("FPS: " .. math.floor(fps))
+            fpsCounter = 0
+            lastTime = currentTime
         end
-        wait(1)
-    end
+    end)
 end
+
+updateFPS()
 
 local Window = OrionLib:MakeWindow({
     Name = "TakzHub | v1",
@@ -118,6 +120,13 @@ local MainTab = Window:MakeTab({
     Icon = "rbxassetid://18675218518",
     PremiumOnly = false
 })
+
+local fpsLabel = MainTab:AddLabel("FPS: Calculating...")
+
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+
+MainTab:AddLabel("Username: " .. localPlayer.Name)
 
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
@@ -219,7 +228,7 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-UpdateLogTab:AddLabel("Updates (8.21)")
+UpdateLogTab:AddLabel("Updates (81.51)")
 
 UpdateLogTab:AddLabel("Update log:")
 
@@ -245,8 +254,6 @@ UpdateLogTab:AddLabel("Added - our script")
 
 UpdateLogTab:AddLabel("Added - Golden Apple Only game: Break in 2")
 
-UpdateLogTab:AddLabel("Added - TOGGLE AUTO ANTI LAG")
-
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
     Icon = "rbxassetid://18678198914",
@@ -271,17 +278,6 @@ SettingsTab:AddButton({
     Name = "Anti Lag",
     Callback = function()
         activateAntiLag()
-    end
-})
-
-SettingsTab:AddToggle({
-    Name = "Auto Anti Lag",
-    Default = false,
-    Callback = function(state)
-        autoAntiLagEnabled = state
-        if state then
-            coroutine.wrap(autoAntiLag)()
-        end
     end
 })
 
