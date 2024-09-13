@@ -130,6 +130,13 @@ MainTab:AddButton({
     end
 })
 
+MainTab:AddButton({
+    Name = "Performance Stats GUI",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Performance-Stat.lua'))()
+    end
+})
+
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
     Icon = "rbxassetid://18675246284",
