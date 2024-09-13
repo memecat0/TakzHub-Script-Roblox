@@ -92,7 +92,7 @@ local Window = OrionLib:MakeWindow({
     SaveConfig = true,
     ConfigFolder = "OrionTest",
     IntroIcon = "rbxassetid://72444682975876",
-    IntroText = "CataiHub | Loading..."
+    IntroText = "TakzHub | Loading..."
 })
 
 OrionLib:MakeNotification({
