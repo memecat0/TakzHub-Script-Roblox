@@ -110,6 +110,23 @@ local MainTab = Window:MakeTab({
 })
 
 MainTab:AddButton({
+    Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
+    Callback = function()
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local GiveToolEvent = ReplicatedStorage:FindFirstChild("Events") and ReplicatedStorage.Events:FindFirstChild("GiveTool")
+        
+        if GiveToolEvent then
+            pcall(function()
+                GiveToolEvent:FireServer("GoldenApple")
+                sendNotification("Golden Apple", "You have received a Golden Apple!")
+            end)
+        else
+            sendNotification("Error", "Failed to find GiveTool event.")
+        end
+    end
+})
+
+MainTab:AddButton({
     Name = "inf yield",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -193,7 +210,7 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-UpdateLogTab:AddLabel("Updates (7.0)")
+UpdateLogTab:AddLabel("Updates (8.21)")
 
 UpdateLogTab:AddLabel("Update log:")
 
@@ -212,6 +229,12 @@ UpdateLogTab:AddLabel("FIXED - TAB SETTINGS")
 UpdateLogTab:AddLabel("Added - TAB DISCORD SERVER")
 
 UpdateLogTab:AddLabel("FIXED - FIXED ANTI-LAG PING")
+
+UpdateLogTab:AddLabel("Updated - Script +8")
+
+UpdateLogTab:AddLabel("Added - our script")
+
+
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
