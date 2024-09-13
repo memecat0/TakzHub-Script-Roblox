@@ -217,31 +217,7 @@ UpdateLogTab:AddLabel("Updates (81.51)")
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddLabel("Added - Credits")
-
-UpdateLogTab:AddLabel("Added - Scripts")
-
-UpdateLogTab:AddLabel("Added - Fixed Esp highlight")
-
-UpdateLogTab:AddLabel("Added - Game Supported all.")
-
-UpdateLogTab:AddLabel("Added - Anti Lag")
-
-UpdateLogTab:AddLabel("FIXED - TAB SETTINGS")
-
-UpdateLogTab:AddLabel("Added - TAB DISCORD SERVER")
-
-UpdateLogTab:AddLabel("FIXED - FIXED ANTI-LAG PING")
-
-UpdateLogTab:AddLabel("Updated - Script +8")
-
-UpdateLogTab:AddLabel("Added - our script")
-
-UpdateLogTab:AddLabel("Added - Golden Apple Only game: Break in 2")
-
-UpdateLogTab:AddLabel("Added - FPS COUNTER FROM TAB MAIN")
-
-UpdateLogTab:AddLabel("Added - Username Player Label from tab main")
+UpdateLogTab:AddLabel("Nothing :)")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
