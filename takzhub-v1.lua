@@ -87,18 +87,18 @@ end
 
 -- Orion GUI setup
 local Window = OrionLib:MakeWindow({
-    Name = "CataiHub | v1",
+    Name = "TakzHub | v1",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
-    IntroIcon = "rbxassetid://18674254677",
+    IntroIcon = "rbxassetid://72444682975876",
     IntroText = "CataiHub | Loading..."
 })
 
 OrionLib:MakeNotification({
     Name = "Welcome!",
-    Content = "CataiHub | Thank its you execute!",
-    Image = "rbxassetid://18674254677",
+    Content = "TakzHub | you its enjoy!",
+    Image = "rbxassetid://72444682975876",
     Time = 5
 })
 
@@ -127,6 +127,54 @@ ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "Connect Hub | a dusty trip",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "OMG HUB | none game",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "Starry Op | Break in 2",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-2-(Story)-Starry-OP-Script-Hub-160-Features-17869"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "FFJ HUB V2 | Doors",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/sNvekgeL"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "FE KICK/BAN | NONE GAME",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhenX21/FE-Kick-Ban-Script/main/source"))()
+    end
+})
+
+local OurScriptTab = Window:MakeTab({
+    Name = "Our Scripts",
+    Icon = "rbxassetid://18675246284",  -- Updated Tab icon asset ID
+    PremiumOnly = false
+})
+
+OurScriptTab:AddButton({
+    Name = "Legend of speed TakzHub | Legend of speed",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Legend-of-speed-script.lua"))()
     end
 })
 
