@@ -65,7 +65,6 @@ local function toggleESP(state)
 end
 
 local function activateAntiLag()
-    -- Use a coroutine to prevent blocking the main thread
     coroutine.wrap(function()
         for _, obj in pairs(workspace:GetDescendants()) do
             if obj:IsA("BasePart") then
@@ -78,6 +77,24 @@ local function activateAntiLag()
             end
         end
     end)()
+end
+
+local autoAntiLagEnabled = false
+local function autoAntiLag()
+    while autoAntiLagEnabled do
+        -- Perform Anti-Lag operations in a loop
+        for _, obj in pairs(workspace:GetDescendants()) do
+            if obj:IsA("BasePart") then
+                obj.Material = Enum.Material.SmoothPlastic
+                obj.CastShadow = false
+            elseif obj:IsA("MeshPart") or obj:IsA("UnionOperation") then
+                obj.RenderFidelity = Enum.RenderFidelity.Performance
+            elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") then
+                obj.Enabled = false
+            end
+        end
+        wait(1)
+    end
 end
 
 local Window = OrionLib:MakeWindow({
@@ -261,8 +278,9 @@ SettingsTab:AddToggle({
     Name = "Auto Anti Lag",
     Default = false,
     Callback = function(state)
+        autoAntiLagEnabled = state
         if state then
-            activateAntiLag()
+            coroutine.wrap(autoAntiLag)()
         end
     end
 })
