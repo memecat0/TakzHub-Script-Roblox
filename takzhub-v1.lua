@@ -1,6 +1,5 @@
 local OrionLib = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Orion/main/source'))()
 local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
 
@@ -80,25 +79,6 @@ local function activateAntiLag()
     end)()
 end
 
-local function updateFPS()
-    local lastTime = tick()
-    local fpsCounter = 0
-
-    RunService.RenderStepped:Connect(function()
-        fpsCounter = fpsCounter + 1
-        local currentTime = tick()
-        if currentTime - lastTime >= 1 then
-            -- Update the FPS label every second
-            local fps = fpsCounter / (currentTime - lastTime)
-            fpsLabel:Set("FPS: " .. math.floor(fps))
-            fpsCounter = 0
-            lastTime = currentTime
-        end
-    end)
-end
-
-updateFPS()
-
 local Window = OrionLib:MakeWindow({
     Name = "TakzHub | v1",
     HidePremium = false,
@@ -121,6 +101,24 @@ local MainTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+local RunService = game:GetService("RunService")
+local function updateFPS()
+    local lastTime = tick()
+    local fpsCounter = 0
+
+    RunService.RenderStepped:Connect(function()
+        fpsCounter = fpsCounter + 1
+        local currentTime = tick()
+        if currentTime - lastTime >= 1 then
+            -- Update the FPS label every second
+            local fps = fpsCounter / (currentTime - lastTime)
+            fpsLabel:Set("FPS: " .. math.floor(fps))
+            fpsCounter = 0
+            lastTime = currentTime
+        end
+    end)
+end
+updateFPS()
 local fpsLabel = MainTab:AddLabel("FPS: Calculating...")
 
 local Players = game:GetService("Players")
@@ -253,6 +251,10 @@ UpdateLogTab:AddLabel("Updated - Script +8")
 UpdateLogTab:AddLabel("Added - our script")
 
 UpdateLogTab:AddLabel("Added - Golden Apple Only game: Break in 2")
+
+UpdateLogTab:AddLabel("Added - FPS COUNTER FROM TAB MAIN")
+
+UpdateLogTab:AddLabel("Added - Username Player Label from tab main")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
