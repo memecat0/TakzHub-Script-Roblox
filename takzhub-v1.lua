@@ -158,7 +158,7 @@ ScriptTab:AddButton({
 })
 
 ScriptTab:AddButton({
-    Name = "OMG HUB | none game",
+    Name = "OMG HUB | Universal Script",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
     end
@@ -179,9 +179,9 @@ ScriptTab:AddButton({
 })
 
 ScriptTab:AddButton({
-    Name = "FE KICK/BAN | NONE GAME",
+    Name = "ZENONHUB | Universal Script",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ZhenX21/FE-Kick-Ban-Script/main/source"))()
+        loadstring(game:HttpGet("https://voidy.lol/ZenonUniversal.lua",true))()
     end
 })
 
