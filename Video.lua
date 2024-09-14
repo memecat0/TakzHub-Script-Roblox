@@ -20,7 +20,7 @@ function CreateHighlight()
                 highlight.Name = "Highlight"
                 highlight.Parent = v.Character
             elseif not highlightEnabled and highlight then
-                highlight:Destroy() -- Remove highlight if disabled
+                highlight:Destroy()
             end
         end
     end
