@@ -95,6 +95,7 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
+
 local MainTab = Window:MakeTab({
     Name = "Main",
     Icon = "rbxassetid://18675218518",
@@ -146,6 +147,7 @@ MainTab:AddButton({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Performance-Stat.lua'))()
     end
 })
+
 
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
@@ -202,11 +204,13 @@ ScriptTab:AddButton({
     end
 })
 
+
 local OurScriptTab = Window:MakeTab({
     Name = "Our Scripts",
     Icon = "rbxassetid://18675246284",
     PremiumOnly = false
 })
+
 
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
@@ -215,12 +219,14 @@ OurScriptTab:AddButton({
     end
 })
 
+
 OurScriptTab:AddButton({
     Name = "ESP MM2 TakzHub | Murder Mystery 2",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/MM2-ESP-HIGHLIGHTS.lua"))()
     end
 })
+
 
 local CreditsTab = Window:MakeTab({
     Name = "Credits",
@@ -238,9 +244,11 @@ local UpdateLogTab = Window:MakeTab({
 
 UpdateLogTab:AddLabel("Update log:")
 
-CoolParagraph:Set("v1.1", "added - ESP MM2 ON OUR SCRIPT")
+UpdateLogTab:Set("v1.1", "added - ESP MM2 ON OUR SCRIPT")
 
-CoolParagraph:Set("v1.0", "FIXED - GOLDEN APPLE Notifications.")
+UpdateLogTab:Set("v1.0", "FIXED - GOLDEN APPLE Notifications.")
+
+
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
@@ -254,6 +262,7 @@ DiscordTab:AddButton({
         setclipboard("https://discord.gg/j8Kdtnz6CA")
     end
 })
+
 
 local SettingsTab = Window:MakeTab({
     Name = "Settings",
