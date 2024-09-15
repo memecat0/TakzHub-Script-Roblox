@@ -115,10 +115,20 @@ MainTab:AddButton({
         if GiveToolEvent then
             pcall(function()
                 GiveToolEvent:FireServer("GoldenApple")
-                sendNotification("Golden Apple", "You have received a Golden Apple!")
+                OrionLib:MakeNotification({
+Name = "Golden Apple",
+Content = "You Have received a Golden Apple! (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
+Image = "rbxassetid://4483345998",
+Time = 2.5
+})
             end)
         else
-            sendNotification("Error", "Failed to find GiveTool event.")
+            OrionLib:MakeNotification({
+Name = "Error",
+Content = "Failed to find GiveTool event. (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
+Image = "rbxassetid://4483345998",
+Time = 1
+})
         end
     end
 })
@@ -220,7 +230,6 @@ local CreditsTab = Window:MakeTab({
 
 CreditsTab:AddLabel("Owner | memecat0")
 
--- Update Log Tab
 local UpdateLogTab = Window:MakeTab({
     Name = "Update Log",
     Icon = "rbxassetid://18675242942",
@@ -232,6 +241,8 @@ UpdateLogTab:AddLabel("Updates (81.51)")
 UpdateLogTab:AddLabel("Update log:")
 
 UpdateLogTab:AddLabel("Added - ESP MM2 ON OUR SCRIPT")
+
+UpdateLogTab:AddLabel("Added - FIX GOLDEN APPLE NOTIFICATIONS ORION LIB")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
