@@ -80,7 +80,7 @@ local function activateAntiLag()
 end
 
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub | v1",
+    Name = "TakzHub | v1.1",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
@@ -236,13 +236,11 @@ local UpdateLogTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-UpdateLogTab:AddLabel("Updates (81.51)")
-
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddLabel("Added - ESP MM2 ON OUR SCRIPT")
+CoolParagraph:Set("v1.1", "added - ESP MM2 ON OUR SCRIPT")
 
-UpdateLogTab:AddLabel("Added - FIX GOLDEN APPLE NOTIFICATIONS ORION LIB")
+CoolParagraph:Set("v1.0", "FIXED - GOLDEN APPLE Notifications.")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
@@ -257,7 +255,6 @@ DiscordTab:AddButton({
     end
 })
 
--- Settings Tab
 local SettingsTab = Window:MakeTab({
     Name = "Settings",
     Icon = "rbxassetid://18674553734",
