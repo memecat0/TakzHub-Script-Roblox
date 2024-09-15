@@ -185,6 +185,13 @@ ScriptTab:AddButton({
     end
 })
 
+ScriptTab:AddButton({
+    Name = "NONE | NONE",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
 local OurScriptTab = Window:MakeTab({
     Name = "Our Scripts",
     Icon = "rbxassetid://18675246284",
@@ -195,6 +202,13 @@ OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Legend-of-speed-script.lua"))()
+    end
+})
+
+OurScriptTab:AddButton({
+    Name = "ESP MM2 TakzHub | Murder Mystery 2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/MM2-ESP-HIGHLIGHTS.lua"))()
     end
 })
 
@@ -217,7 +231,7 @@ UpdateLogTab:AddLabel("Updates (81.51)")
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddLabel("Nothing :)")
+UpdateLogTab:AddLabel("Added - ESP MM2 ON OUR SCRIPT")
 
 local DiscordTab = Window:MakeTab({
     Name = "Discord Server",
