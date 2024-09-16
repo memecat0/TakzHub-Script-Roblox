@@ -244,10 +244,9 @@ local UpdateLogTab = Window:MakeTab({
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:Set("v1.1", "added - ESP MM2 ON OUR SCRIPT")
+UpdateLogTab:AddParagraph("v1.1","MM2 ESP HIGHLIGHTS see script it this our scripts!")
 
-UpdateLogTab:Set("v1.0", "FIXED - GOLDEN APPLE Notifications.")
-
+UpdateLogTab:AddParagraph("v1.0","fix golden apple this notification.")
 
 
 local DiscordTab = Window:MakeTab({
