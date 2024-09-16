@@ -95,7 +95,6 @@ OrionLib:MakeNotification({
     Time = 5
 })
 
-
 local MainTab = Window:MakeTab({
     Name = "Main",
     Icon = "rbxassetid://18675218518",
@@ -147,7 +146,6 @@ MainTab:AddButton({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Performance-Stat.lua'))()
     end
 })
-
 
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
@@ -211,14 +209,12 @@ local OurScriptTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Legend-of-speed-script.lua"))()
     end
 })
-
 
 OurScriptTab:AddButton({
     Name = "ESP MM2 TakzHub | Murder Mystery 2",
@@ -227,7 +223,6 @@ OurScriptTab:AddButton({
     end
 })
 
-
 local CreditsTab = Window:MakeTab({
     Name = "Credits",
     Icon = "rbxassetid://18676059123",
@@ -235,6 +230,7 @@ local CreditsTab = Window:MakeTab({
 })
 
 CreditsTab:AddLabel("Owner | memecat0")
+
 
 local UpdateLogTab = Window:MakeTab({
     Name = "Update Log",
@@ -261,7 +257,6 @@ DiscordTab:AddButton({
         setclipboard("https://discord.gg/j8Kdtnz6CA")
     end
 })
-
 
 local SettingsTab = Window:MakeTab({
     Name = "Settings",
