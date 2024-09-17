@@ -141,9 +141,9 @@ MainTab:AddButton({
 })
 
 MainTab:AddButton({
-    Name = "Performance Stats GUI",
+    Name = "Performance Stats GUI (FIXED)",
     Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Performance-Stat.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/refs/heads/main/PERFORMANCE-STAT.lua'))()
     end
 })
 
