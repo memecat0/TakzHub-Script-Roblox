@@ -147,6 +147,21 @@ MainTab:AddButton({
     end
 })
 
+MainTab:AddSlider({
+    Name = "WalkSpeed",
+    Min = 16,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255, 255, 255),
+    Increment = 1,
+    ValueName = "WalkSpeed",
+    Callback = function(value)
+        -- Change the player's walk speed
+        local player = game.Players.LocalPlayer
+        player.Character.Humanoid.WalkSpeed = value
+    end    
+})
+
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
     Icon = "rbxassetid://18675246284",
