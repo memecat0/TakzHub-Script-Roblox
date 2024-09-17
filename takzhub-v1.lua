@@ -196,9 +196,9 @@ ScriptTab:AddButton({
 })
 
 ScriptTab:AddButton({
-    Name = "NONE | NONE",
+    Name = "YARHM | Universal Script",
     Callback = function()
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet("https://yarhm.goteamst.com/scr", false))()
     end
 })
 
