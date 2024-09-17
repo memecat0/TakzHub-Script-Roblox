@@ -161,6 +161,28 @@ ScriptTab:AddButton({
 })
 
 ScriptTab:AddButton({
+    Name = "Speed Hub X | Blox Fruits",
+    Callback = function()
+        loadstring(game:HttpGet(“https://gitlab.com/littlekiller2927/deltacore/-/raw/main/deltabf.lua”))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "Rise Hub | Blox Fruits",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/FreeScripts.lua"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "ARC HUB | King Legacy",
+    Callback = function()
+        getgenv().CustomDistance = 1
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
+    end
+})
+
+ScriptTab:AddButton({
     Name = "Connect Hub | a dusty trip",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/artemy133563/Utilities/main/ADustyTrip",true))()
