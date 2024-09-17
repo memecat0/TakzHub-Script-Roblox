@@ -34,14 +34,6 @@ pingLabel.Text = "Ping: ?ms"
 pingLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 pingLabel.Parent = frame
 
-local antiLagButton = Instance.new("TextButton")
-antiLagButton.Size = UDim2.new(0, 100, 0, 30)
-antiLagButton.Position = UDim2.new(0.5, -50, 0, 110)
-antiLagButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-antiLagButton.Text = "Anti Lag"
-antiLagButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-antiLagButton.Parent = frame
-
 local runService = game:GetService("RunService")
 local stats = game:GetService("Stats")
 
@@ -62,21 +54,4 @@ runService.RenderStepped:Connect(function(deltaTime)
 
     local ping = math.floor(stats.Network.ServerStatsItem["Data Ping"]:GetValue())
     pingLabel.Text = "Ping: " .. ping .. "ms"
-end)
-
-antiLagButton.MouseButton1Click:Connect(function()
-    local lighting = game:GetService("Lighting")
-
-    lighting.GlobalShadows = false
-    lighting.FogEnd = 100000 
-    lighting.Brightness = 1 
-
-    for _, object in pairs(workspace:GetDescendants()) do
-        if object:IsA("ParticleEmitter") or object:IsA("Trail") or object:IsA("Smoke") or object:IsA("Fire") then
-            object.Enabled = false
-        end
-    end
-
-    settings().Rendering.QualityLevel = Enum.QualityLevel.Level01  -- Set graphics quality to low
-
 end)
