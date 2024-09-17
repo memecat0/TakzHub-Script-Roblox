@@ -161,13 +161,6 @@ ScriptTab:AddButton({
 })
 
 ScriptTab:AddButton({
-    Name = "Speed Hub X | Blox Fruits",
-    Callback = function()
-        loadstring(game:HttpGet(“https://gitlab.com/littlekiller2927/deltacore/-/raw/main/deltabf.lua”))()
-    end
-})
-
-ScriptTab:AddButton({
     Name = "Rise Hub | Blox Fruits",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/FreeScripts.lua"))()
