@@ -127,7 +127,7 @@ Time = 2.5
 Name = "Error",
 Content = "Failed to find GiveTool event. (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
 Image = "rbxassetid://4483345998",
-Time = 1
+Time = 2.5
 })
         end
     end
@@ -145,20 +145,6 @@ MainTab:AddButton({
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Performance-Stat.lua'))()
     end
-})
-
-MainTab:AddSlider({
-	Name = "Walkspeed",
-	Min = 0,
-	Max = 20,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "WS",
-	Callback = function(Value)
-		local player = game.Players.LocalPlayer
-        player.Character.Humanoid.WalkSpeed = value
-	end    
 })
 
 local ScriptTab = Window:MakeTab({
@@ -269,6 +255,12 @@ DiscordTab:AddButton({
     Name = "Copy Discord Link",
     Callback = function()
         setclipboard("https://discord.gg/j8Kdtnz6CA")
+	OrionLib:MakeNotification({
+Name = "Discord Server Clipboard!",
+Content = "see a like now SERVER DISCORD Copied!",
+Image = "rbxassetid://4483345998",
+Time = 1.5
+})
     end
 })
 
