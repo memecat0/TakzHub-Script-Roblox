@@ -177,8 +177,7 @@ ScriptTab:AddButton({
 ScriptTab:AddButton({
     Name = "ARC HUB | King Legacy",
     Callback = function()
-        getgenv().CustomDistance = 1
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
     end
 })
 
