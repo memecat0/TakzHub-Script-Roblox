@@ -229,8 +229,7 @@ local CreditsTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-CreditsTab:AddLabel("Owner | memecat0")
-
+CreditsTab:AddParagraph("Owner","i like its see think this user memecat0 on Discord")
 
 local UpdateLogTab = Window:MakeTab({
     Name = "Update Log",
