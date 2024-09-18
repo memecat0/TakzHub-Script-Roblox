@@ -79,8 +79,52 @@ local function activateAntiLag()
     end)()
 end
 
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "ScreenGui"
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+local Toggle = Instance.new("ImageButton")
+Toggle.Name = "Toggle"
+Toggle.Parent = ScreenGui
+Toggle.BackgroundTransparency = 1
+Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
+Toggle.Size = UDim2.new(0, 25, 0, 25)
+Toggle.Image = "rbxassetid://72444682975876"
+Toggle.Draggable = true
+
+local Corner = Instance.new("UICorner")
+Corner.CornerRadius = UDim.new(0.2, 0)
+Corner.Parent = Toggle
+
+local isOn = false
+
+local function onButtonClicked()
+    if gethui():FindFirstChild("Orion") then
+        gethui().Orion.Enabled = not gethui().Orion.Enabled
+    end
+end
+
+local function offButtonClicked()
+    if gethui():FindFirstChild("Orion") then
+        gethui().Orion.Enabled = not gethui().Orion.Enabled
+    end
+end
+
+Toggle.MouseButton1Click:Connect(function()
+    isOn = not isOn
+    if isOn then
+        Toggle.Image = "rbxassetid://72444682975876"
+        onButtonClicked()
+    else
+        Toggle.Image = "rbxassetid://72444682975876"
+        offButtonClicked()
+    end
+end)
+
+
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub | v1.1",
+    Name = "TakzHub | v1.2",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
@@ -252,6 +296,8 @@ local UpdateLogTab = Window:MakeTab({
 })
 
 UpdateLogTab:AddLabel("Update log:")
+
+UpdateLogTab:AddParagraph("v1.2","TOGGLE UI SEE THIS IMAGE FIXED")
 
 UpdateLogTab:AddParagraph("v1.1","MM2 ESP HIGHLIGHTS see script it this our scripts!")
 
