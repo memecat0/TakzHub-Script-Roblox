@@ -89,7 +89,7 @@ Toggle.Name = "Toggle"
 Toggle.Parent = ScreenGui
 Toggle.BackgroundTransparency = 1
 Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 35, 0, 35)
+Toggle.Size = UDim2.new(0, 45, 0, 45)
 Toggle.Image = "rbxassetid://72444682975876"
 Toggle.Draggable = true
 
