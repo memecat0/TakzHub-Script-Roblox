@@ -122,9 +122,26 @@ Toggle.MouseButton1Click:Connect(function()
     end
 end)
 
+local function fetchUserAgent()
+    local response = request({
+        Url = "https://httpbin.org/user-agent",
+        Method = "GET",
+    })
+
+    assert(type(response) == "table", "Response must be a table")
+    assert(response.StatusCode == 200, "Did not return a 200 status code")
+    
+    -- Decode the JSON response to extract the user-agent
+    local data = game:GetService("HttpService"):JSONDecode(response.Body)
+    assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
+    
+    return data["user-agent"]
+end
+
+local userAgent = fetchUserAgent()
 
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub | v1.2",
+    Name = "TakzHub v1.3 |" .. userAgent,
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
@@ -296,6 +313,8 @@ local UpdateLogTab = Window:MakeTab({
 })
 
 UpdateLogTab:AddLabel("Update log:")
+
+UpdateLogTab:AddParagraph("v1.3","ISSUES USER AGENT FROM TITLE see this Supported")
 
 UpdateLogTab:AddParagraph("v1.2","TOGGLE UI SEE THIS IMAGE FIXED")
 
