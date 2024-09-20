@@ -141,7 +141,7 @@ end
 local userAgent = fetchUserAgent()
 
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub v1.3 |" .. userAgent,
+    Name = "TakzHub v1.3 | " .. userAgent,
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
