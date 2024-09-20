@@ -140,6 +140,8 @@ end
 
 local userAgent = fetchUserAgent()
 
+local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
+
 local Window = OrionLib:MakeWindow({
     Name = "TakzHub v1.3 | " .. userAgent,
     HidePremium = false,
@@ -166,6 +168,8 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
 MainTab:AddLabel("Username: " .. localPlayer.Name)
+
+UpdateLogTab:AddParagraph("YOUR HWID: " .. HWID)
 
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
