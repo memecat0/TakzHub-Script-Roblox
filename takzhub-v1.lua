@@ -169,7 +169,7 @@ local localPlayer = Players.LocalPlayer
 
 MainTab:AddLabel("Username: " .. localPlayer.Name)
 
-MainTab:AddParagraph("YOUR HWID: " .. HWID)
+MainTab:AddLabel("Your HWID: " .. HWID)
 
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
