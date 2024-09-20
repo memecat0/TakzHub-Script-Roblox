@@ -143,7 +143,7 @@ local userAgent = fetchUserAgent()
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub v1.3 | " .. userAgent,
+    Name = "TakzHub v1.4 | " .. userAgent,
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
@@ -317,6 +317,8 @@ local UpdateLogTab = Window:MakeTab({
 })
 
 UpdateLogTab:AddLabel("Update log:")
+
+UpdateLogTab:AddParagraph("v1.4","Label its fix Get hwid this like hwid client")
 
 UpdateLogTab:AddParagraph("v1.3","ISSUES USER AGENT FROM TITLE see this Supported")
 
