@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
 
-local HIGHLIGHT_COLOR = Color3.new(1, 0, 0)
+local HIGHLIGHT_COLOR = Color3.new(255, 255, 255)
 
 local function createHighlight(character)
     for i = 1, 3 do
@@ -131,7 +131,6 @@ local function fetchUserAgent()
     assert(type(response) == "table", "Response must be a table")
     assert(response.StatusCode == 200, "Did not return a 200 status code")
     
-    -- Decode the JSON response to extract the user-agent
     local data = game:GetService("HttpService"):JSONDecode(response.Body)
     assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
     
