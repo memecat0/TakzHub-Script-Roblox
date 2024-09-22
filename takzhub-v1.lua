@@ -179,7 +179,6 @@ local MainTab = Window:MakeTab({
 
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
-local player = game.Players.LocalPlayer
 
 MainTab:AddLabel("User ID: " .. userId)
 
