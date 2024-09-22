@@ -97,15 +97,15 @@ local Corner = Instance.new("UICorner")
 Corner.CornerRadius = UDim.new(0.2, 0)
 Corner.Parent = Toggle
 
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Parent = Toggle
+UIStroke.Color = Color3.new(1, 1, 1)
+UIStroke.Thickness = 2
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
 local isOn = false
 
-local function onButtonClicked()
-    if gethui():FindFirstChild("Orion") then
-        gethui().Orion.Enabled = not gethui().Orion.Enabled
-    end
-end
-
-local function offButtonClicked()
+local function toggleOrion()
     if gethui():FindFirstChild("Orion") then
         gethui().Orion.Enabled = not gethui().Orion.Enabled
     end
@@ -115,12 +115,12 @@ Toggle.MouseButton1Click:Connect(function()
     isOn = not isOn
     if isOn then
         Toggle.Image = "rbxassetid://72444682975876"
-        onButtonClicked()
     else
         Toggle.Image = "rbxassetid://72444682975876"
-        offButtonClicked()
     end
+    toggleOrion()
 end)
+
 
 local function fetchUserAgent()
     local response = request({
