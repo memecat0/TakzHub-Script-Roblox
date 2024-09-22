@@ -141,18 +141,6 @@ local userAgent = fetchUserAgent()
 
 local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
 
-game.Players.PlayerAdded:Connect(function()
-    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
-end)
-
-game.Players.PlayerRemoving:Connect(function()
-    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
-end)
-
-local function getPlayerCount()
-    return tostring(#game.Players:GetPlayers())
-end
-
 local userId = tostring(player.UserId)
 
 local Window = OrionLib:MakeWindow({
@@ -189,6 +177,18 @@ MainTab:AddLabel("Your HWID: " .. HWID)
 MainTab:AddLabel("Game ID: " .. tostring(game.GameId))
 
 local playerCountLabel = MainTab:AddLabel("Players in Server: " .. getPlayerCount())
+
+game.Players.PlayerAdded:Connect(function()
+    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
+end)
+
+game.Players.PlayerRemoving:Connect(function()
+    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
+end)
+
+local function getPlayerCount()
+    return tostring(#game.Players:GetPlayers())
+end
 
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
