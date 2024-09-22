@@ -170,6 +170,8 @@ MainTab:AddLabel("Username: " .. localPlayer.Name)
 
 MainTab:AddLabel("Your HWID: " .. HWID)
 
+MainTab:AddLabel("Game ID: " .. tostring(game.GameId))
+
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
     Callback = function()
