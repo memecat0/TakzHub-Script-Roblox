@@ -90,7 +90,7 @@ Toggle.Parent = ScreenGui
 Toggle.BackgroundTransparency = 1
 Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
 Toggle.Size = UDim2.new(0, 45, 0, 45)
-Toggle.Image = "rbxassetid://72444682975876"
+Toggle.Image = "rbxassetid://72444682975876" -- Image for 'on' state
 Toggle.Draggable = true
 
 local Corner = Instance.new("UICorner")
@@ -103,6 +103,23 @@ UIStroke.Color = Color3.new(1, 1, 1)
 UIStroke.Thickness = 2
 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
+local UIGradient = Instance.new("UIGradient")
+UIGradient.Parent = Toggle
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),
+    ColorSequenceKeypoint.new(0.17, Color3.fromRGB(255, 127, 0)),
+    ColorSequenceKeypoint.new(0.33, Color3.fromRGB(255, 255, 0)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 255, 0)),
+    ColorSequenceKeypoint.new(0.67, Color3.fromRGB(0, 0, 255)),
+    ColorSequenceKeypoint.new(0.83, Color3.fromRGB(75, 0, 130)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(148, 0, 211)),
+}
+
+local TweenService = game:GetService("TweenService")
+
+local rotationTween = TweenService:Create(Toggle, TweenInfo.new(2, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, -1, true), {Rotation = 360})
+rotationTween:Play()
+
 local isOn = false
 
 local function toggleOrion()
@@ -114,12 +131,13 @@ end
 Toggle.MouseButton1Click:Connect(function()
     isOn = not isOn
     if isOn then
-        Toggle.Image = "rbxassetid://72444682975876"
+        Toggle.Image = "rbxassetid://72444682975876" -- Image for 'on' state
     else
-        Toggle.Image = "rbxassetid://72444682975876"
+        Toggle.Image = "rbxassetid://72444682975877" -- Image for 'off' state (replace with actual ID)
     end
     toggleOrion()
 end)
+
 
 
 local function fetchUserAgent()
