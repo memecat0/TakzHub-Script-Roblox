@@ -2,7 +2,9 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 repeat task.wait(0.25) until game:IsLoaded()
 
-getgenv().Image = "rbxassetid://7229442422" -- Asset ID for the button image
+repeat task.wait(0.25) until game:IsLoaded()
+
+getgenv().Image = "rbxassetid://72444682975876" -- Asset ID for the button image
 getgenv().ToggleUI = "LeftControl" -- Key to toggle the Fluent UI library
 
 task.spawn(function()
@@ -20,14 +22,14 @@ task.spawn(function()
         ImageButton.Parent = OpenUI
         ImageButton.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
         ImageButton.BackgroundTransparency = 0.8
-        ImageButton.Position = UDim2.new(0, 0, 0.454706937, 0)
-        ImageButton.Size = UDim2.new(0, 45, 0, 45)
+        ImageButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+        ImageButton.Size = UDim2.new(0, 50, 0, 50)
         ImageButton.Image = getgenv().Image
         ImageButton.Draggable = true
 
-        -- Create square corners (no UICorner needed)
+        -- Create rounded corners
         local UICorner = Instance.new("UICorner")
-        UICorner.CornerRadius = UDim.new(0.2, 0) -- Square corners
+        UICorner.CornerRadius = UDim.new(0, 10) -- Adjust this value for more or less rounding
         UICorner.Parent = ImageButton
 
         -- Create the UIStroke for the rainbow effect
