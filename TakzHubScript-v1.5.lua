@@ -1,5 +1,6 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
+local UserInputService = game:GetService("UserInputService")
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ScreenGui"
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -42,15 +43,26 @@ local function toggleFluent()
     end
 end
 
-Toggle.MouseButton1Click:Connect(function()
+local function toggleState()
     isOn = not isOn
     if isOn then
-        Toggle.Image = "rbxassetid://72444682975876"
+        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'on' image
     else
-        Toggle.Image = "rbxassetid://72444682975876"
+        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'off' image
     end
     toggleFluent()
+end
+
+-- Mouse click event
+Toggle.MouseButton1Click:Connect(toggleState)
+
+-- Keybind for LeftControl
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+    if input.KeyCode == Enum.KeyCode.LeftControl and not gameProcessedEvent then
+        toggleState()
+    end
 end)
+
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -59,7 +71,7 @@ local Window = Fluent:CreateWindow({
     Size = UDim2.fromOffset(580, 460),
     Acrylic = true,
     Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.Fluent
+    MinimizeKey = Enum.KeyCode.LeftControl
 })
 
 local Tabs = {
