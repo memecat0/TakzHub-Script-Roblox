@@ -57,13 +57,13 @@ local Window = Fluent:CreateWindow({
     SubTitle = "Script",
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Acrylic = true,
     Theme = "Dark",
     MinimizeKey = Enum.KeyCode.Fluent
 })
 
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
