@@ -38,19 +38,19 @@ end
 coroutine.wrap(setRainbowStroke)()
 
 local function toggleFluent()
-    if gethui():FindFirstChild("Fluent") then
-        gethui().Fluent.Enabled = not gethui().Fluent.Enabled
+    if gethui():FindFirstChild("State") then
+        gethui().State.Enabled = not gethui().State.Enabled
     end
 end
 
 local function toggleState()
     isOn = not isOn
     if isOn then
-        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'on' image
+        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'on' image ID
     else
-        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'off' image
+        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'off' image ID
     end
-    toggleFluent()
+    toggleState()
 end
 
 -- Mouse click event
