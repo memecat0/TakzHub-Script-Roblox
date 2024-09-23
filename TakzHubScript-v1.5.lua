@@ -20,14 +20,14 @@ task.spawn(function()
         ImageButton.Parent = OpenUI
         ImageButton.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
         ImageButton.BackgroundTransparency = 0.8
-        ImageButton.Position = UDim2.new(0.9, 0, 0.1, 0)
-        ImageButton.Size = UDim2.new(0, 50, 0, 50)
+        ImageButton.Position = UDim2.new(0, 0, 0.454706937, 0)
+        ImageButton.Size = UDim2.new(0, 45, 0, 45)
         ImageButton.Image = getgenv().Image
         ImageButton.Draggable = true
 
         -- Create square corners (no UICorner needed)
         local UICorner = Instance.new("UICorner")
-        UICorner.CornerRadius = UDim.new(0, 0) -- Square corners
+        UICorner.CornerRadius = UDim.new(0.2, 0) -- Square corners
         UICorner.Parent = ImageButton
 
         -- Create the UIStroke for the rainbow effect
