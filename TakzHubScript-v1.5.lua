@@ -1,65 +1,55 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local UserInputService = game:GetService("UserInputService")
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ScreenGui"
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
+repeat task.wait(0.25) until game:IsLoaded()
 
-local Toggle = Instance.new("ImageButton")
-Toggle.Name = "Toggle"
-Toggle.Parent = ScreenGui
-Toggle.BackgroundTransparency = 1
-Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 45, 0, 45)
-Toggle.Image = "rbxassetid://72444682975876"
-Toggle.Draggable = true
+getgenv().Image = "rbxassetid://7229442422" -- Asset ID for the button image
+getgenv().ToggleUI = "LeftControl" -- Key to toggle the Fluent UI library
 
-local Corner = Instance.new("UICorner")
-Corner.CornerRadius = UDim.new(0.2, 0)
-Corner.Parent = Toggle
+task.spawn(function()
+    if not getgenv().LoadedMobileUI then
+        getgenv().LoadedMobileUI = true
 
-local UIStroke = Instance.new("UIStroke")
-UIStroke.Parent = Toggle
-UIStroke.Thickness = 2
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        -- Create the ScreenGui
+        local OpenUI = Instance.new("ScreenGui")
+        OpenUI.Name = "OpenUI"
+        OpenUI.Parent = game:GetService("CoreGui")
+        OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local isOn = false
+        -- Create the ImageButton
+        local ImageButton = Instance.new("ImageButton")
+        ImageButton.Parent = OpenUI
+        ImageButton.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
+        ImageButton.BackgroundTransparency = 0.8
+        ImageButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+        ImageButton.Size = UDim2.new(0, 50, 0, 50)
+        ImageButton.Image = getgenv().Image
+        ImageButton.Draggable = true
 
-local function setRainbowStroke()
-    while true do
-        for i = 0, 1, 0.01 do
-            UIStroke.Color = Color3.fromHSV(i, 1, 1)
-            wait(0.1)
-        end
-    end
-end
+        -- Create square corners (no UICorner needed)
+        local UICorner = Instance.new("UICorner")
+        UICorner.CornerRadius = UDim.new(0, 0) -- Square corners
+        UICorner.Parent = ImageButton
 
-coroutine.wrap(setRainbowStroke)()
+        -- Create the UIStroke for the rainbow effect
+        local UIStroke = Instance.new("UIStroke")
+        UIStroke.Parent = ImageButton
+        UIStroke.Thickness = 2
+        UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
-local function toggleFluent()
-    if gethui():FindFirstChild("State") then
-        gethui().State.Enabled = not gethui().State.Enabled
-    end
-end
+        -- Rainbow stroke effect
+        task.spawn(function()
+            while true do
+                for i = 0, 1, 0.01 do
+                    UIStroke.Color = Color3.fromHSV(i, 1, 1)
+                    task.wait(0.1)
+                end
+            end
+        end)
 
-local function toggleState()
-    isOn = not isOn
-    if isOn then
-        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'on' image ID
-    else
-        Toggle.Image = "rbxassetid://72444682975876"  -- Replace with actual 'off' image ID
-    end
-    toggleState()
-end
-
--- Mouse click event
-Toggle.MouseButton1Click:Connect(toggleState)
-
--- Keybind for LeftControl
-UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
-    if input.KeyCode == Enum.KeyCode.LeftControl and not gameProcessedEvent then
-        toggleState()
+        -- Button click event to toggle the Fluent UI
+        ImageButton.MouseButton1Click:Connect(function()
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, getgenv().ToggleUI, false, game)
+        end)
     end
 end)
 
