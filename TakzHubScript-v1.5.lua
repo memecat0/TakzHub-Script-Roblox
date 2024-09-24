@@ -55,6 +55,32 @@ task.spawn(function()
     end
 end)
 
+local function fetchUserAgent()
+    local response = request({
+        Url = "https://httpbin.org/user-agent",
+        Method = "GET",
+    })
+
+    assert(type(response) == "table", "Response must be a table")
+    assert(response.StatusCode == 200, "Did not return a 200 status code")
+    
+    local data = game:GetService("HttpService"):JSONDecode(response.Body)
+    assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
+    
+    return data["user-agent"]
+end
+
+local userAgent = fetchUserAgent()
+
+local Options = Fluent.Options
+
+do
+    Fluent:Notify({
+        Title = "Welcome!",
+        Content = "Enjoy its Execute!",
+        SubContent = "SubContent", -- Optional
+        Duration = 2 -- Set to nil to make the notification not disappear
+    })
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -67,10 +93,20 @@ local Window = Fluent:CreateWindow({
 })
 
 local Tabs = {
+    Home = Window:AddTab({ Title = "Home", Icon = "rbxassetid://18675218518" }),
     Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" }),
+    Hello = Window:AddTab({ Title = "not done", Icon = "" }),
+    Hello1 = Window:AddTab({ Title = "not done", Icon = "" }),
+    Hello2 = Window:AddTab({ Title = "Not done", Icon = "" }),
+    Hello3 = Window:AddTab({ Title = "not done", Icon = "" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
+    Tabs.Home:AddParagraph({
+        Title = "Executor:",
+        Content = "Executor Your: " .. userAgent,
+    })
+    
     Tabs.Main:AddButton({
         Title = "Button",
         Description = "Very important button",
