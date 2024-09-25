@@ -78,7 +78,7 @@ Fluent:Notify({
 
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" }),
-    Settings = Window:AddTab({ Title = "", Icon = "settings" })
+    Test = Window:AddTab({ Title = "Settings", Icon = "settings" })
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
