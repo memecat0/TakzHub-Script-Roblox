@@ -38,7 +38,7 @@ end
 
 local Tab = Window:MakeTab({
     Name = "Player Info",
-    Icon = "rbxassetid://4483345998", -- Placeholder icon
+    Icon = "rbxassetid://4483345998",
     PremiumOnly = false
 })
 
