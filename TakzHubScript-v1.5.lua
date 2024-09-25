@@ -1,7 +1,3 @@
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-
 repeat task.wait(0.25) until game:IsLoaded()
 
 repeat task.wait(0.25) until game:IsLoaded()
@@ -57,6 +53,9 @@ task.spawn(function()
     end
 end)
 
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -76,21 +75,22 @@ Fluent:Notify({
 
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" }),
+    Settings = Window:AddTab({ Title = "", Icon = "settings" })
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
     Tabs.Main:AddButton({
-        Title = "Button",
-        Description = "Very important button",
+        Title = "Inf Yield",
+        Description = "Well its Command Inf Yield!",
         Callback = function()
             Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
+                Title = "Infinite Yield",
+                Content = "Infinite Yield its command +150.",
                 Buttons = {
                     {
                         Title = "Confirm",
                         Callback = function()
-                            print("Confirmed the dialog.")
+                            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
                         end
                     },
                     {
