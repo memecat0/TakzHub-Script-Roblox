@@ -6,8 +6,8 @@ repeat task.wait(0.25) until game:IsLoaded()
 
 repeat task.wait(0.25) until game:IsLoaded()
 
-getgenv().Image = "rbxassetid://72444682975876" -- Asset ID for the button image
-getgenv().ToggleUI = "LeftControl" -- Key to toggle the Fluent UI library
+getgenv().Image = "rbxassetid://72444682975876"
+getgenv().ToggleUI = "LeftControl"
 
 task.spawn(function()
     if not getgenv().LoadedMobileUI then
@@ -57,6 +57,22 @@ task.spawn(function()
     end
 end)
 
+local function fetchUserAgent()
+    local response = request({
+        Url = "https://httpbin.org/user-agent",
+        Method = "GET",
+    })
+
+    assert(type(response) == "table", "Response must be a table")
+    assert(response.StatusCode == 200, "Did not return a 200 status code")
+    
+    local data = game:GetService("HttpService"):JSONDecode(response.Body)
+    assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
+    
+    return data["user-agent"]
+end
+
+local userAgent = fetchUserAgent()
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -78,3 +94,8 @@ local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "rbxassetid://18675218518" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
+
+    Tabs.Home:AddParagraph({
+        Title = "Executor",
+        Content = "Your Executor: " .. userAgent,
+    })
