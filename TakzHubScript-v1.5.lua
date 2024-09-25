@@ -5,8 +5,6 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 repeat task.wait(0.25) until game:IsLoaded()
 
-repeat task.wait(0.25) until game:IsLoaded()
-
 getgenv().Image = "rbxassetid://72444682975876"
 getgenv().ToggleUI = "LeftControl"
 
