@@ -95,7 +95,7 @@ local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
-    Tabs.Home:AddParagraph({
-        Title = "Executor",
-        Content = "Your Executor: " .. userAgent,
-    })
+Tabs.Home:AddParagraph({
+    Title = "Executor",
+    Content = "Your Executor: .. userAgent,"
+})
