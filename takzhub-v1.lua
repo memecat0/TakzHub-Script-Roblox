@@ -1,4 +1,4 @@
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
+loadstring(game:HttpGet(("https://pastebin.com/raw/qFq47UT3")))()
 local Players = game:GetService("Players")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
