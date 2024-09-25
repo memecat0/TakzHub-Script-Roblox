@@ -79,6 +79,7 @@ local function activateAntiLag()
     end)()
 end
 
+
 repeat task.wait(0.25) until game:IsLoaded()
 
 getgenv().Image = "rbxassetid://72444682975876"
@@ -307,7 +308,7 @@ local UpdateLogTab = Window:MakeTab({
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddParagraph("v1.5","Added Button Player Info and REMOVED USER AGENT EXECUTOR ON TITLE AND REMOVED HWID LABEL AND REMOVED USERNAME LABEL AND WELL DONE ITS BACK TAKZHUB ORION UODATED V1.5!")
+UpdateLogTab:AddParagraph("v1.5","nothing lol and Added Button player info")
 
 
 local DiscordTab = Window:MakeTab({
