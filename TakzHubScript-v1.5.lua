@@ -100,7 +100,7 @@ local Tabs = {
 
     Tabs.Home:AddParagraph({
         Title = "Executor:",
-        Content = "Executor Your: " .. userAgent,
+        Content = "Executor Your: .. userAgent,"
     })
     
     Tabs.Main:AddButton({
