@@ -131,30 +131,8 @@ Toggle.MouseButton1Click:Connect(function()
     toggleOrion()
 end)
 
-
-local function fetchUserAgent()
-    local response = request({
-        Url = "https://httpbin.org/user-agent",
-        Method = "GET",
-    })
-
-    assert(type(response) == "table", "Response must be a table")
-    assert(response.StatusCode == 200, "Did not return a 200 status code")
-    
-    local data = game:GetService("HttpService"):JSONDecode(response.Body)
-    assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
-    
-    return data["user-agent"]
-end
-
-local userAgent = fetchUserAgent()
-
-local HWID = game:GetService("RbxAnalyticsService"):GetClientId()
-
-local userId = tostring(player.UserId)
-
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub v1.4 | " .. userAgent,
+    Name = "TakzHub v1.5"
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "OrionTest",
@@ -177,28 +155,6 @@ local MainTab = Window:MakeTab({
 
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
-
-MainTab:AddLabel("User ID: " .. userId)
-
-MainTab:AddLabel("Username: " .. localPlayer.Name)
-
-MainTab:AddLabel("Your HWID: " .. HWID)
-
-MainTab:AddLabel("Game ID: " .. tostring(game.GameId))
-
-local playerCountLabel = MainTab:AddLabel("Players in Server: " .. getPlayerCount())
-
-game.Players.PlayerAdded:Connect(function()
-    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
-end)
-
-game.Players.PlayerRemoving:Connect(function()
-    playerCountLabel:Set("Players in Server: " .. getPlayerCount())
-end)
-
-local function getPlayerCount()
-    return tostring(#game.Players:GetPlayers())
-end
 
 MainTab:AddButton({
     Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
