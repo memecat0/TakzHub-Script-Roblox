@@ -57,22 +57,6 @@ task.spawn(function()
     end
 end)
 
-local function fetchUserAgent()
-    local response = request({
-        Url = "https://httpbin.org/user-agent",
-        Method = "GET",
-    })
-
-    assert(type(response) == "table", "Response must be a table")
-    assert(response.StatusCode == 200, "Did not return a 200 status code")
-    
-    local data = game:GetService("HttpService"):JSONDecode(response.Body)
-    assert(type(data) == "table" and type(data["user-agent"]) == "string", "Did not return a table with a user-agent key")
-    
-    return data["user-agent"]
-end
-
-local userAgent = fetchUserAgent()
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -91,11 +75,35 @@ Fluent:Notify({
 })
 
 local Tabs = {
-    Home = Window:AddTab({ Title = "Home", Icon = "rbxassetid://18675218518" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
-Tabs.Home:AddParagraph({
-    Title = "Executor",
-    Content = "Your Executor: .. userAgent,"
+    Tabs.Main:AddButton({
+        Title = "Button",
+        Description = "Very important button",
+        Callback = function()
+            Window:Dialog({
+                Title = "Title",
+                Content = "This is a dialog",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                            print("Confirmed the dialog.")
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+                            Fluent:Notify({
+    Title = "Cancel",
+    Content = "Cancelled!",
+    Duration = 1
 })
+                        end
+                    }
+                }
+            })
+        end
+    })
