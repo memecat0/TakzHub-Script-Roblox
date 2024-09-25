@@ -1,4 +1,4 @@
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/REDzHUB/LibraryV2/main/redzLib")))()
 local Players = game:GetService("Players")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
@@ -79,106 +79,69 @@ local function activateAntiLag()
     end)()
 end
 
-
-repeat task.wait(0.25) until game:IsLoaded()
-
-getgenv().Image = "rbxassetid://72444682975876"
-getgenv().ToggleUI = "Right"
-
-task.spawn(function()
-    if not getgenv().LoadedMobileUI then
-        getgenv().LoadedMobileUI = true
-
-        local OpenUI = Instance.new("ScreenGui")
-        OpenUI.Name = "OpenUI"
-        OpenUI.Parent = game:GetService("CoreGui")
-        OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-        local ImageButton = Instance.new("ImageButton")
-        ImageButton.Parent = OpenUI
-        ImageButton.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
-        ImageButton.BackgroundTransparency = 0.8
-        ImageButton.Position = UDim2.new(0.9, 0, 0.1, 0)
-        ImageButton.Size = UDim2.new(0, 45, 0, 45)
-        ImageButton.Image = getgenv().Image
-        ImageButton.Draggable = true
-
-        local UICorner = Instance.new("UICorner")
-        UICorner.CornerRadius = UDim.new(0, 10)
-        UICorner.Parent = ImageButton
-
-        local UIStroke = Instance.new("UIStroke")
-        UIStroke.Parent = ImageButton
-        UIStroke.Thickness = 2
-        UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-
-        task.spawn(function()
-            while true do
-                for i = 0, 1, 0.01 do
-                    UIStroke.Color = Color3.fromHSV(i, 1, 1)
-                    task.wait(0.1)
-                end
-            end
-        end)
-
-        ImageButton.MouseButton1Click:Connect(function()
-            game:GetService("VirtualInputManager"):SendKeyEvent(true, getgenv().ToggleUI, false, game)
-        end)
-    end
-end)
-
-
-local Window = OrionLib:MakeWindow({
-    Name = "TakzHub v1.5"
-    HidePremium = false,
-    SaveConfig = true,
-    ConfigFolder = "TakzHub Orion",
-    IntroIcon = "rbxassetid://72444682975876",
-    IntroText = "TakzHub | Loading..."
+MakeWindow({
+  Hub = {
+    Title = "TakzHub",
+    Animation = "Script V1.5"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System",
+    Description = "",
+    KeyLink = "",
+    Keys = {"test"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
 })
 
-
-OrionLib:MakeNotification({
-    Name = "Welcome!",
-    Content = "TakzHub | you its enjoy!",
-    Image = "rbxassetid://72444682975876",
-    Time = 5
+MinimizeButton({
+  Image = "72444682975876",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = false,
+  StrokeColor = Color3.fromRGB(255, 0, 0)
 })
 
-local MainTab = Window:MakeTab({
-    Name = "Main",
-    Icon = "rbxassetid://18675218518",
-    PremiumOnly = false
+MakeNotifi({
+  Title = "Welcome!",
+  Text = "TakzHub | you its enjoy!",
+  Time = 5
 })
+
+local Main = MakeTab({Name = "Main"})
 
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
-MainTab:AddButton({
-    Name = "GET GOLDEN APPLE | ONLY GAME: BREAK IN 2",
-    Callback = function()
-        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+AddButton(Main, {
+  Name = "Golden Apple | Only Game:Break in 2",
+  Callback = function()
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
         local GiveToolEvent = ReplicatedStorage:FindFirstChild("Events") and ReplicatedStorage.Events:FindFirstChild("GiveTool")
         
         if GiveToolEvent then
             pcall(function()
                 GiveToolEvent:FireServer("GoldenApple")
-                OrionLib:MakeNotification({
-Name = "Golden Apple",
-Content = "You Have received a Golden Apple! (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
-Image = "rbxassetid://4483345998",
-Time = 2.5
+MakeNotifi({
+  Title = "Golden Apple",
+  Text = "You Have received a Golden Apple! (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
+  Time = 2
 })
-            end)
+end)
         else
-            OrionLib:MakeNotification({
-Name = "Error",
-Content = "Failed to find GiveTool event. (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
-Image = "rbxassetid://4483345998",
-Time = 2.5
+MakeNotifi({
+  Title = "Error",
+  Text = "Failed to find GiveTool event. (Here Join server: https://discord.gg/j8Kdtnz6CA) ❤",
+  Time = 2
 })
-        end
-    end
+  end
+end
 })
 
 MainTab:AddButton({
@@ -202,11 +165,7 @@ MainTab:AddButton({
     end
 })
 
-local ScriptTab = Window:MakeTab({
-    Name = "Scripts",
-    Icon = "rbxassetid://18675246284",
-    PremiumOnly = false
-})
+local Script = MakeTab({Name = "Script"})
 
 ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
@@ -271,12 +230,7 @@ ScriptTab:AddButton({
     end
 })
 
-
-local OurScriptTab = Window:MakeTab({
-    Name = "Our Scripts",
-    Icon = "rbxassetid://18675246284",
-    PremiumOnly = false
-})
+local OurScript = MakeTab({Name = "Our Script"})
 
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
@@ -292,82 +246,44 @@ OurScriptTab:AddButton({
     end
 })
 
-local CreditsTab = Window:MakeTab({
-    Name = "Credits",
-    Icon = "rbxassetid://18676059123",
-    PremiumOnly = false
+local Credits = MakeTab({Name = "Credits"})
+
+local Label = AddTextLabel(Credits, "Owner: i like its see think this user memecat0 on Discord")
+
+local UpdateLog = MakeTab({Name = "UpdateLog"})
+
+local Label = AddTextLabel(UpdateLog, "Update Log:")
+
+local Label = AddTextLabel(UpdateLog, "v1.5: nothing lol and Added Button player info")
+
+
+local Discord = MakeTab({Name = "Discord"})
+
+AddButton(Discord, {
+  Name = "Copy Discord Link",
+  Callback = function()
+    setclipboard("https://discord.gg/j8Kdtnz6CA")
+MakeNotifi({
+  Title = "Discord Server Clipboard!",
+  Text = "Well enjoy clipboard now join discord server!",
+  Time = 5
+})
+  end
 })
 
-CreditsTab:AddParagraph("Owner","i like its see think this user memecat0 on Discord")
+local Settings = MakeTab({Name = "Settings"})
 
-local UpdateLogTab = Window:MakeTab({
-    Name = "Update Log",
-    Icon = "rbxassetid://18675242942",
-    PremiumOnly = false
+AddButton(Settings, {
+  Name = "anti lag",
+  Callback = function()
+    activateAntiLag()
+  end
 })
 
-UpdateLogTab:AddLabel("Update log:")
-
-UpdateLogTab:AddParagraph("v1.5","nothing lol and Added Button player info")
-
-
-local DiscordTab = Window:MakeTab({
-    Name = "Discord Server",
-    Icon = "rbxassetid://18678198914",
-    PremiumOnly = false
+local Toggle = AddToggle(Main, {
+  Name = "Enable ESP",
+  Default = false,
+  Callback = function(Value)
+    toggleESP(state)
+  end
 })
-
-DiscordTab:AddButton({
-    Name = "Copy Discord Link",
-    Callback = function()
-        setclipboard("https://discord.gg/j8Kdtnz6CA")
-	OrionLib:MakeNotification({
-Name = "Discord Server Clipboard!",
-Content = "see a like now SERVER DISCORD Copied!",
-Image = "rbxassetid://4483345998",
-Time = 1.5
-})
-    end
-})
-
-local SettingsTab = Window:MakeTab({
-    Name = "Settings",
-    Icon = "rbxassetid://18674553734",
-    PremiumOnly = false
-})
-
-SettingsTab:AddButton({
-    Name = "Anti Lag",
-    Callback = function()
-        activateAntiLag()
-    end
-})
-
-SettingsTab:AddToggle({
-    Name = "Enable ESP",
-    Default = false,
-    Callback = function(state)
-        toggleESP(state)
-    end
-})
-
-SettingsTab:AddColorpicker({
-    Name = "Highlight Color",
-    Default = HIGHLIGHT_COLOR,
-    Callback = function(color)
-        HIGHLIGHT_COLOR = color
-        if ESP_ENABLED then
-            for _, player in pairs(Players:GetPlayers()) do
-                if player.Character then
-                    for _, obj in pairs(player.Character:GetChildren()) do
-                        if obj:IsA("Highlight") then
-                            obj.FillColor = HIGHLIGHT_COLOR
-                        end
-                    end
-                end
-            end
-        end
-    end
-})
-
-OrionLib:Init()
