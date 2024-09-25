@@ -197,6 +197,13 @@ MainTab:AddButton({
     end
 })
 
+MainTab:AddButton({
+    Name = "Player Info",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()
+    end
+})
+
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
     Icon = "rbxassetid://18675246284",
@@ -303,15 +310,7 @@ local UpdateLogTab = Window:MakeTab({
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddParagraph("v1.4","Label its fix Get hwid this like hwid client")
-
-UpdateLogTab:AddParagraph("v1.3","ISSUES USER AGENT FROM TITLE see this Supported")
-
-UpdateLogTab:AddParagraph("v1.2","TOGGLE UI SEE THIS IMAGE FIXED")
-
-UpdateLogTab:AddParagraph("v1.1","MM2 ESP HIGHLIGHTS see script it this our scripts!")
-
-UpdateLogTab:AddParagraph("v1.0","fix golden apple this notification.")
+UpdateLogTab:AddParagraph("v1.5","Added Button Player Info and REMOVED USER AGENT EXECUTOR ON TITLE AND REMOVED HWID LABEL AND REMOVED USERNAME LABEL AND WELL DONE ITS BACK TAKZHUB ORION UODATED V1.5!")
 
 
 local DiscordTab = Window:MakeTab({
