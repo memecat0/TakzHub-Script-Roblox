@@ -11,7 +11,7 @@ local function createHighlight(character)
         highlight.Parent = character
         highlight.Adornee = character
         highlight.FillColor = HIGHLIGHT_COLOR
-        highlight.OutlineColor = Color3.new(255, 255, 255)
+        highlight.OutlineColor = Color3.new(1, 1, 1)
         highlight.OutlineTransparency = 0
         highlight.Name = "Highlight" .. i
     end
