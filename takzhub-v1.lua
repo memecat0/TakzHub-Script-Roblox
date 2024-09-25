@@ -82,14 +82,14 @@ end
 MakeWindow({
   Hub = {
     Title = "TakzHub",
-    Animation = "Script V1.5"
+    Animation = "TakzHub Script V1.5"
   },
   Key = {
     KeySystem = false,
-    Title = "Key System",
-    Description = "",
-    KeyLink = "",
-    Keys = {"test"},
+    Title = "Key System - TakzHub",
+    Description = "this its loggin key system!",
+    KeyLink = "1234",
+    Keys = {"1234"},
     Notifi = {
       Notifications = true,
       CorrectKey = "Running the Script...",
@@ -115,6 +115,12 @@ MakeNotifi({
 })
 
 local Main = MakeTab({Name = "Main"})
+local Script = MakeTab({Name = "Script"})
+local OurScript = MakeTab({Name = "Our Script"})
+local Credits = MakeTab({Name = "Credits"})
+local UpdateLog = MakeTab({Name = "UpdateLog"})
+local Discord = MakeTab({Name = "Discord"})
+local Settings = MakeTab({Name = "Settings"})
 
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
@@ -164,8 +170,6 @@ MainTab:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()
     end
 })
-
-local Script = MakeTab({Name = "Script"})
 
 ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
@@ -230,8 +234,6 @@ ScriptTab:AddButton({
     end
 })
 
-local OurScript = MakeTab({Name = "Our Script"})
-
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
     Callback = function()
@@ -246,18 +248,13 @@ OurScriptTab:AddButton({
     end
 })
 
-local Credits = MakeTab({Name = "Credits"})
-
 local Label = AddTextLabel(Credits, "Owner: i like its see think this user memecat0 on Discord")
-
-local UpdateLog = MakeTab({Name = "UpdateLog"})
 
 local Label = AddTextLabel(UpdateLog, "Update Log:")
 
 local Label = AddTextLabel(UpdateLog, "v1.5: nothing lol and Added Button player info")
 
 
-local Discord = MakeTab({Name = "Discord"})
 
 AddButton(Discord, {
   Name = "Copy Discord Link",
@@ -270,8 +267,6 @@ MakeNotifi({
 })
   end
 })
-
-local Settings = MakeTab({Name = "Settings"})
 
 AddButton(Settings, {
   Name = "anti lag",
