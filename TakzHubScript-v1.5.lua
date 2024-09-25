@@ -76,32 +76,3 @@ local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" })
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
-    
-    Tabs.Main:AddButton({
-        Title = "Button",
-        Description = "Very important button",
-        Callback = function()
-            Window:Dialog({
-                Title = "Title",
-                Content = "This is a dialog",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                            print("Confirmed the dialog.")
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-                            Fluent:Notify({
-    Title = "Cancel",
-    Content = "Cancel Script!",
-    Duration = 2
-})
-                        end
-                    }
-                }
-            })
-        end
-    })
