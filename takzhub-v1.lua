@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
 
-local HIGHLIGHT_COLOR = Color3.new(255, 255, 255)
+local HIGHLIGHT_COLOR = Color3.new(1, 1, 1)
 
 local function createHighlight(character)
     for i = 1, 3 do
