@@ -79,63 +79,58 @@ local function activateAntiLag()
     end)()
 end
 
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "ScreenGui"
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
+repeat task.wait(0.25) until game:IsLoaded()
 
-local Toggle = Instance.new("ImageButton")
-Toggle.Name = "Toggle"
-Toggle.Parent = ScreenGui
-Toggle.BackgroundTransparency = 1
-Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 45, 0, 45)
-Toggle.Image = "rbxassetid://72444682975876"
-Toggle.Draggable = true
+getgenv().Image = "rbxassetid://72444682975876"
+getgenv().ToggleUI = "Right"
 
-local Corner = Instance.new("UICorner")
-Corner.CornerRadius = UDim.new(0.2, 0)
-Corner.Parent = Toggle
+task.spawn(function()
+    if not getgenv().LoadedMobileUI then
+        getgenv().LoadedMobileUI = true
 
-local UIStroke = Instance.new("UIStroke")
-UIStroke.Parent = Toggle
-UIStroke.Thickness = 2
-UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        local OpenUI = Instance.new("ScreenGui")
+        OpenUI.Name = "OpenUI"
+        OpenUI.Parent = game:GetService("CoreGui")
+        OpenUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-local isOn = false
+        local ImageButton = Instance.new("ImageButton")
+        ImageButton.Parent = OpenUI
+        ImageButton.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
+        ImageButton.BackgroundTransparency = 0.8
+        ImageButton.Position = UDim2.new(0.9, 0, 0.1, 0)
+        ImageButton.Size = UDim2.new(0, 45, 0, 45)
+        ImageButton.Image = getgenv().Image
+        ImageButton.Draggable = true
 
-local function setRainbowStroke()
-    while true do
-        for i = 0, 1, 0.01 do
-            UIStroke.Color = Color3.fromHSV(i, 1, 1)
-            wait(0.1)
-        end
+        local UICorner = Instance.new("UICorner")
+        UICorner.CornerRadius = UDim.new(0, 10)
+        UICorner.Parent = ImageButton
+
+        local UIStroke = Instance.new("UIStroke")
+        UIStroke.Parent = ImageButton
+        UIStroke.Thickness = 2
+        UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+        task.spawn(function()
+            while true do
+                for i = 0, 1, 0.01 do
+                    UIStroke.Color = Color3.fromHSV(i, 1, 1)
+                    task.wait(0.1)
+                end
+            end
+        end)
+
+        ImageButton.MouseButton1Click:Connect(function()
+            game:GetService("VirtualInputManager"):SendKeyEvent(true, getgenv().ToggleUI, false, game)
+        end)
     end
-end
-
-coroutine.wrap(setRainbowStroke)()
-
-local function toggleOrion()
-    if gethui():FindFirstChild("Orion") then
-        gethui().Orion.Enabled = not gethui().Orion.Enabled
-    end
-end
-
-Toggle.MouseButton1Click:Connect(function()
-    isOn = not isOn
-    if isOn then
-        Toggle.Image = "rbxassetid://72444682975876"
-    else
-        Toggle.Image = "rbxassetid://72444682975876"
-    end
-    toggleOrion()
 end)
 
 local Window = OrionLib:MakeWindow({
     Name = "TakzHub v1.5"
     HidePremium = false,
     SaveConfig = true,
-    ConfigFolder = "OrionTest",
+    ConfigFolder = "TakzHub Orion",
     IntroIcon = "rbxassetid://72444682975876",
     IntroText = "TakzHub | Loading..."
 })
