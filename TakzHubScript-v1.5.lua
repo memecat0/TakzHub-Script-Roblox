@@ -55,11 +55,6 @@ task.spawn(function()
     end
 end)
 
-Fluent:Notify({
-    Title = "TakzHub | v1.5",
-    Content = "The script has been loaded.",
-    Duration = 8
-})
 
 local Window = Fluent:CreateWindow({
     Title = "TakzHub " .. Fluent.Version,
@@ -71,8 +66,13 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.LeftControl
 })
 
+Fluent:Notify({
+    Title = "TakzHub | v1.5",
+    Content = "The script has been loaded.",
+    Duration = 8
+})
+
 local Tabs = {
     Home = Window:AddTab({ Title = "Home", Icon = "rbxassetid://18675218518" }),
-    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://18675218518" })
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
