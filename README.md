@@ -11,3 +11,6 @@ ESP MM2 Script - ```loadstring(game:HttpGet("https://raw.githubusercontent.com/m
 
 
 Player Info Script - ```loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()```
+
+
+FE YEET GUI (CAT GOKU) Script - ```loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/FE_YEET_GUI-CAT.lua"))()```
