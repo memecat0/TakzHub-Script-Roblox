@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local Window = Library.CreateLib("Cat Hub v0.5", "Ocean")
+local Window = Library.CreateLib("TakzHub v0.5", "Ocean")
 
 
 local Tab = Window:NewTab("Credit")
@@ -23,8 +23,8 @@ Section:NewButton("infinite yield", "cool infyield", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
-Section:NewButton("troll fling Gui", "ButtonInfo", function()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/CatHub027/CatHubTrollyeet/main/CatHubTrollyeet'))()
+Section:NewButton("troll fling Gui", "Troll Gui", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/memecat0/CatHubTrollyeet/main/CatHubTrollyeet'))()
 end)
 
 local Tab = Window:NewTab("Soon")
