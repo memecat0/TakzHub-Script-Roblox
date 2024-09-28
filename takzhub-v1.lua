@@ -254,8 +254,6 @@ local Label = AddTextLabel(UpdateLog, "Update Log:")
 
 local Label = AddTextLabel(UpdateLog, "v1.5: nothing lol and Added Button player info")
 
-
-
 AddButton(Discord, {
   Name = "Copy Discord Link",
   Callback = function()
