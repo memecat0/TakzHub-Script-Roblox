@@ -8,8 +8,8 @@ MakeWindow({
     KeySystem = false,
     Title = "Key System - TakzHub",
     Description = "this its loggin key system!",
-    KeyLink = "1234",
-    Keys = {"1234"},
+    KeyLink = "",
+    Keys = {"TakzHub Key_12345"},
     Notifi = {
       Notifications = true,
       CorrectKey = "Running the Script...",
