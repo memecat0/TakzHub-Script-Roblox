@@ -150,39 +150,39 @@ MakeNotifi({
 end
 })
 
-MainTab:AddButton({
-    Name = "inf yield",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-    end
+AddButton(Main, {
+  Name = "inf yield",
+  Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  end
 })
 
-MainTab:AddButton({
-    Name = "Performance Stats GUI (FIXED)",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PERFORMANCE-STAT.lua'))()
-    end
+AddButton(Main, {
+  Name = "Performance Stats GUI (FIXED)",
+  Callback = function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PERFORMANCE-STAT.lua'))()
+  end
 })
 
-MainTab:AddButton({
-    Name = "Player Info",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()
-    end
+AddButton(Main, {
+  Name = "Player Info",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()
+  end
 })
 
-ScriptTab:AddButton({
-    Name = "RedzHub | Blox Fruits",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
-    end
+AddButton(Script, {
+  Name = "RedzHub | Blox fruits",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()
+  end
 })
 
-ScriptTab:AddButton({
-    Name = "Rise Hub | Blox Fruits",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/FreeScripts.lua"))()
-    end
+AddButton(Script, {
+  Name = "Rise Hub | Blox fruits",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/TrashLua/BloxFruits/main/FreeScripts.lua"))()
+  end
 })
 
 ScriptTab:AddButton({
@@ -275,7 +275,7 @@ AddButton(Settings, {
   end
 })
 
-local Toggle = AddToggle(Main, {
+local Toggle = AddToggle(Settings, {
   Name = "Enable ESP",
   Default = false,
   Callback = function(Value)
