@@ -1,4 +1,24 @@
 loadstring(game:HttpGet(("https://pastebin.com/raw/qFq47UT3")))()
+MakeWindow({
+  Hub = {
+    Title = "TakzHub",
+    Animation = "TakzHub Script V1.5"
+  },
+  Key = {
+    KeySystem = false,
+    Title = "Key System - TakzHub",
+    Description = "this its loggin key system!",
+    KeyLink = "1234",
+    Keys = {"1234"},
+    Notifi = {
+      Notifications = true,
+      CorrectKey = "Running the Script...",
+      Incorrectkey = "The key is incorrect",
+      CopyKeyLink = "Copied to Clipboard"
+    }
+  }
+})
+
 local Players = game:GetService("Players")
 local ESP_ENABLED = false
 local ESP_CONNECTIONS = {}
@@ -78,26 +98,6 @@ local function activateAntiLag()
         end
     end)()
 end
-
-MakeWindow({
-  Hub = {
-    Title = "TakzHub",
-    Animation = "TakzHub Script V1.5"
-  },
-  Key = {
-    KeySystem = false,
-    Title = "Key System - TakzHub",
-    Description = "this its loggin key system!",
-    KeyLink = "1234",
-    Keys = {"1234"},
-    Notifi = {
-      Notifications = true,
-      CorrectKey = "Running the Script...",
-      Incorrectkey = "The key is incorrect",
-      CopyKeyLink = "Copied to Clipboard"
-    }
-  }
-})
 
 MinimizeButton({
   Image = "rbxassetid://72444682975876",
