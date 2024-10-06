@@ -1,5 +1,4 @@
 loadstring(game:HttpGet(("https://pastebin.com/raw/qFq47UT3")))()
-
 MakeWindow({
   Hub = {
     Title = "TakzHub",
