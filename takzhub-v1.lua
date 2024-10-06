@@ -1,11 +1,12 @@
 loadstring(game:HttpGet(("https://pastebin.com/raw/qFq47UT3")))()
+
 MakeWindow({
   Hub = {
     Title = "TakzHub",
     Animation = "TakzHub Script V1.5"
   },
   Key = {
-    KeySystem = false,
+    KeySystem = true,
     Title = "Key System - TakzHub",
     Description = "this its loggin key system!",
     KeyLink = "",
