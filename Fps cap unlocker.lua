@@ -19,7 +19,7 @@ RunService.Heartbeat:Connect(function()
     AutoAntiLag()
 end)
 
-local Window = OrionLib:MakeWindow({Name = "Performance Settings", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionConfig"})
+local Window = OrionLib:MakeWindow({Name = "Performance Settings", HidePremium = false, SaveConfig = true, ConfigFolder = "FpscapTakzHub", IntroText = "loading | Takzhub Fps unlocker", IntroIcon = "rbxassetid://72444682975876"})
 
 local Tab = Window:MakeTab({
     Name = "FPS Settings",
