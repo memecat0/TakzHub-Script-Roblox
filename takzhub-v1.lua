@@ -303,11 +303,7 @@ local UpdateLogTab = Window:MakeTab({
 
 UpdateLogTab:AddLabel("Update log:")
 
-UpdateLogTab:AddParagraph("v1.2","TOGGLE UI SEE THIS IMAGE FIXED")
-
-UpdateLogTab:AddParagraph("v1.1","MM2 ESP HIGHLIGHTS see script it this our scripts!")
-
-UpdateLogTab:AddParagraph("v1.0","fix golden apple this notification.")
+UpdateLogTab:AddParagraph("v1.5","Its nothing :)")
 
 
 local DiscordTab = Window:MakeTab({
