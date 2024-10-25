@@ -30,7 +30,7 @@ local Tab = Window:MakeTab({
 Tab:AddSlider({
     Name = "FPS Cap",
     Min = 30,
-    Max = 5000,
+    Max = 6500,
     Default = FPSCap,
     Color = Color3.fromRGB(255, 255, 255),
     Increment = 10,
