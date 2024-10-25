@@ -89,7 +89,7 @@ Toggle.Name = "Toggle"
 Toggle.Parent = ScreenGui
 Toggle.BackgroundTransparency = 1
 Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 35, 0, 35)
+Toggle.Size = UDim2.new(0, 45, 0, 45)
 Toggle.Image = "rbxassetid://72444682975876"
 Toggle.Draggable = true
 
@@ -98,18 +98,24 @@ Corner.CornerRadius = UDim.new(0.2, 0)
 Corner.Parent = Toggle
 
 local UIStroke = Instance.new("UIStroke")
-UIStroke.Thickness = 2
 UIStroke.Parent = Toggle
+UIStroke.Thickness = 2
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
 
 local isOn = false
 
-local function onButtonClicked()
-    if gethui():FindFirstChild("Orion") then
-        gethui().Orion.Enabled = not gethui().Orion.Enabled
+local function setRainbowStroke()
+    while true do
+        for i = 0, 1, 0.01 do
+            UIStroke.Color = Color3.fromHSV(i, 1, 1)
+            wait(0.1)
+        end
     end
 end
 
-local function offButtonClicked()
+coroutine.wrap(setRainbowStroke)()
+
+local function toggleOrion()
     if gethui():FindFirstChild("Orion") then
         gethui().Orion.Enabled = not gethui().Orion.Enabled
     end
@@ -119,18 +125,10 @@ Toggle.MouseButton1Click:Connect(function()
     isOn = not isOn
     if isOn then
         Toggle.Image = "rbxassetid://72444682975876"
-        onButtonClicked()
     else
         Toggle.Image = "rbxassetid://72444682975876"
-        offButtonClicked()
     end
-end)
-
--- Rainbow effect
-local hue = 0
-game:GetService("RunService").RenderStepped:Connect(function()
-    hue = (hue + 1) % 360
-    UIStroke.Color = Color3.fromHSV(hue / 360, 1, 1)
+    toggleOrion()
 end)
 
 local Window = OrionLib:MakeWindow({
