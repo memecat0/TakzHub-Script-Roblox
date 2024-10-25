@@ -97,6 +97,10 @@ local Corner = Instance.new("UICorner")
 Corner.CornerRadius = UDim.new(0.2, 0)
 Corner.Parent = Toggle
 
+local UIStroke = Instance.new("UIStroke")
+UIStroke.Thickness = 2
+UIStroke.Parent = Toggle
+
 local isOn = false
 
 local function onButtonClicked()
@@ -122,6 +126,12 @@ Toggle.MouseButton1Click:Connect(function()
     end
 end)
 
+-- Rainbow effect
+local hue = 0
+game:GetService("RunService").RenderStepped:Connect(function()
+    hue = (hue + 1) % 360
+    UIStroke.Color = Color3.fromHSV(hue / 360, 1, 1)
+end)
 
 local Window = OrionLib:MakeWindow({
     Name = "TakzHub | v1.5",
