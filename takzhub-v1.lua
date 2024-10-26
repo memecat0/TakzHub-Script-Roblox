@@ -196,7 +196,7 @@ local ScriptTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-CoolLabel:Set("Blox Fruits | Script")
+ScriptTab:AddLabel("Blox Fruits | Script")
 
 ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
@@ -212,7 +212,7 @@ ScriptTab:AddButton({
     end
 })
 
-CoolLabel:Set("King Legacy | Script")
+ScriptTab:AddLabel("King Legacy | Script")
 
 ScriptTab:AddButton({
     Name = "ARC HUB | King Legacy",
@@ -221,7 +221,7 @@ ScriptTab:AddButton({
     end
 })
 
-CoolLabel:Set("Dusty Trip | Script")
+ScriptTab:AddLabel("Dusty Trip | Script")
 
 ScriptTab:AddButton({
     Name = "Connect Hub | a dusty trip",
@@ -230,7 +230,7 @@ ScriptTab:AddButton({
     end
 })
 
-CoolLabel:Set("Universal Script")
+ScriptTab:AddLabel("Universal Script | Script")
 
 ScriptTab:AddButton({
     Name = "OMG HUB | Universal Script",
@@ -253,7 +253,7 @@ ScriptTab:AddButton({
     end
 })
 
-CoolLabel:Set("Break in 1-2 | Script")
+ScriptTab:AddLabel("Break in Story 1-2 | Script")
 
 ScriptTab:AddButton({
     Name = "Starry Op | Break in 2",
@@ -262,7 +262,7 @@ ScriptTab:AddButton({
     end
 })
 
-CoolLabel:Set("Doors 👁 | Script")
+ScriptTab:AddLabel("Doors 👁 | Script")
 
 ScriptTab:AddButton({
     Name = "FFJ HUB V2 | Doors",
