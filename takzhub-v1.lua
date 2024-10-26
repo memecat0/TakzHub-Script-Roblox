@@ -196,6 +196,8 @@ local ScriptTab = Window:MakeTab({
     PremiumOnly = false
 })
 
+CoolLabel:Set("Blox Fruits | Script")
+
 ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
     Callback = function()
@@ -210,12 +212,16 @@ ScriptTab:AddButton({
     end
 })
 
+CoolLabel:Set("King Legacy | Script")
+
 ScriptTab:AddButton({
     Name = "ARC HUB | King Legacy",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ChopLoris/ArcHub/main/main.lua"))()
     end
 })
+
+CoolLabel:Set("Dusty Trip | Script")
 
 ScriptTab:AddButton({
     Name = "Connect Hub | a dusty trip",
@@ -224,24 +230,12 @@ ScriptTab:AddButton({
     end
 })
 
+CoolLabel:Set("Universal Script")
+
 ScriptTab:AddButton({
     Name = "OMG HUB | Universal Script",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Omgshit/Scripts/main/MainLoader.lua"))()
-    end
-})
-
-ScriptTab:AddButton({
-    Name = "Starry Op | Break in 2",
-    Callback = function()
-        loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-2-(Story)-Starry-OP-Script-Hub-160-Features-17869"))()
-    end
-})
-
-ScriptTab:AddButton({
-    Name = "FFJ HUB V2 | Doors",
-    Callback = function()
-        loadstring(game:HttpGet("https://pastebin.com/raw/sNvekgeL"))()
     end
 })
 
@@ -259,6 +253,23 @@ ScriptTab:AddButton({
     end
 })
 
+CoolLabel:Set("Break in 1-2 | Script")
+
+ScriptTab:AddButton({
+    Name = "Starry Op | Break in 2",
+    Callback = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Break-In-2-(Story)-Starry-OP-Script-Hub-160-Features-17869"))()
+    end
+})
+
+CoolLabel:Set("Doors 👁 | Script")
+
+ScriptTab:AddButton({
+    Name = "FFJ HUB V2 | Doors",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/sNvekgeL"))()
+    end
+})
 
 local OurScriptTab = Window:MakeTab({
     Name = "Our Scripts",
