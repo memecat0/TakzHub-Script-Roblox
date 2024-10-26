@@ -190,13 +190,6 @@ MainTab:AddButton({
     end
 })
 
-MainTab:AddButton({
-    Name = "Performance Stats GUI (FIXED)",
-    Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/refs/heads/main/PERFORMANCE-STAT.lua'))()
-    end
-})
-
 local ScriptTab = Window:MakeTab({
     Name = "Scripts",
     Icon = "rbxassetid://18675246284",
@@ -276,14 +269,28 @@ local OurScriptTab = Window:MakeTab({
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/Legend-of-speed-script.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/Legend-of-speed-script.lua"))()
     end
 })
 
 OurScriptTab:AddButton({
     Name = "ESP MM2 TakzHub | Murder Mystery 2",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CataiHub/TakzHub-Script-Roblox/main/MM2-ESP-HIGHLIGHTS.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/MM2-ESP-HIGHLIGHTS.lua"))()
+    end
+})
+
+OurScriptTab:AddButton({
+    Name = "Fps unlocker TakzHub | Universal Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/fps-cap-unlocker.lua"))()
+    end
+})
+
+OurScriptTab:AddButton({
+    Name = "PlayerInfo TakzHub | Universal Script",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/PlayerInfo.lua"))()
     end
 })
 
