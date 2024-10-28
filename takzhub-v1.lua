@@ -82,7 +82,7 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ScreenGui"
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
+ScreenGui.ResetOnSpawn = True
 
 local Toggle = Instance.new("ImageButton")
 Toggle.Name = "Toggle"
@@ -280,14 +280,7 @@ local OurScriptTab = Window:MakeTab({
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/Legend-of-speed-script.lua"))()
-    end
-})
-
-OurScriptTab:AddButton({
-    Name = "ESP MM2 TakzHub | Murder Mystery 2",
-    Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/MM2-ESP-HIGHLIGHTS.lua"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/memecat0/TakzHub-Script-Roblox/refs/heads/main/Legend-of-speed-Script.lua"))()
     end
 })
 
