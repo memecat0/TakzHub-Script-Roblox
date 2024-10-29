@@ -289,19 +289,54 @@ ScriptTab:AddButton({
     end
 })
 
-ScriptTab:AddLabel("Script name | Script")
+ScriptTab:AddLabel("Ninja Legends | Script")
 
 ScriptTab:AddButton({
-    Name = "Script name | Game name",
+    Name = "Ninja legends script | Ninja Legends",
     Callback = function()
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zepsyy2/asd/main/Ninja%20Legends.lua"))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = "ProximaHub | Ninja Legends",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
     end
 })
 
 ScriptTab:AddLabel("Script mame | Script")
 
 ScriptTab:AddButton({
-    Name = "Script name | Game name",
+    Name = " | Blade ball",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = " | Blade ball",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = " | Blade ball",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = " | Blade ball",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
+ScriptTab:AddButton({
+    Name = " | Blade ball",
     Callback = function()
         loadstring(game:HttpGet(""))()
     end
