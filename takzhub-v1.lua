@@ -82,7 +82,7 @@ end
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ScreenGui"
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = True
+ScreenGui.ResetOnSpawn = true
 
 local Toggle = Instance.new("ImageButton")
 Toggle.Name = "Toggle"
