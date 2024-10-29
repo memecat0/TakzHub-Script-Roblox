@@ -132,7 +132,7 @@ Toggle.MouseButton1Click:Connect(function()
 end)
 
 local Window = OrionLib:MakeWindow({
-    Name = "TakzHub | v1.5",
+    Name = "🎃 TakzHub [Halloween] 🍬 | v1.5",
     HidePremium = false,
     SaveConfig = true,
     ConfigFolder = "TakzHub",
