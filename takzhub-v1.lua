@@ -271,6 +271,42 @@ ScriptTab:AddButton({
     end
 })
 
+ScriptTab:AddLabel("Money Clicker Incremental | Script")
+
+ScriptTab:AddButton({
+    Name = "Money Clicker Incremental Script | Money Clicker Incremental",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ToraScript/Script/main/MoneyClicker"))()
+    end
+})
+
+ScriptTab:AddLabel("Flags Battles Simulator | Script")
+
+ScriptTab:AddButton({
+    Name = "Flags Battles Simulator Script | Flags Battles Simulator",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/itsnoctural/Utilities/main/FlagBattlesSim.lua"))()
+    end
+})
+
+ScriptTab:AddLabel("Script name | Script")
+
+ScriptTab:AddButton({
+    Name = "Script name | Game name",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
+ScriptTab:AddLabel("Script mame | Script")
+
+ScriptTab:AddButton({
+    Name = "Script name | Game name",
+    Callback = function()
+        loadstring(game:HttpGet(""))()
+    end
+})
+
 local OurScriptTab = Window:MakeTab({
     Name = "Our Scripts",
     Icon = "rbxassetid://18675246284",
