@@ -196,7 +196,7 @@ local ScriptTab = Window:MakeTab({
     PremiumOnly = false
 })
 
-ScriptTab:AddLabel("Blox Fruits | Script")
+ScriptTab:AddLabel("Script TakzHub +85 | Script")
 
 ScriptTab:AddButton({
     Name = "RedzHub | Blox Fruits",
@@ -328,6 +328,11 @@ ScriptTab:AddButton({
     end
 })
 
+local OurScriptTab = Window:MakeTab({
+    Name = "Our Scripts",
+    Icon = "rbxassetid://18675246284",
+    PremiumOnly = false
+})
 
 OurScriptTab:AddButton({
     Name = "Legend of speed TakzHub | Legend of speed",
