@@ -271,6 +271,13 @@ ScriptTab:AddButton({
     end
 })
 
+ScriptTab:AddButton({
+    Name = "Candy Farm Doors | Doors",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LHking123456/Dhjfdr9hk/refs/heads/main/Doors"))()
+    end
+})
+
 ScriptTab:AddLabel("Money Clicker Incremental | Script")
 
 ScriptTab:AddButton({
@@ -305,47 +312,20 @@ ScriptTab:AddButton({
     end
 })
 
-ScriptTab:AddLabel("Script mame | Script")
+ScriptTab:AddLabel("Meme sea | Script")
 
 ScriptTab:AddButton({
-    Name = " | Blade ball",
+    Name = "RedzHub | Meme Sea",
     Callback = function()
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/MemeSea/main/Source.lua"))()
     end
 })
 
 ScriptTab:AddButton({
-    Name = " | Blade ball",
+    Name = "ElGatoHub | Meme Sea",
     Callback = function()
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/FrostLua/Krakles/main/ElgatoHub/Loader.lua'),true))()
     end
-})
-
-ScriptTab:AddButton({
-    Name = " | Blade ball",
-    Callback = function()
-        loadstring(game:HttpGet(""))()
-    end
-})
-
-ScriptTab:AddButton({
-    Name = " | Blade ball",
-    Callback = function()
-        loadstring(game:HttpGet(""))()
-    end
-})
-
-ScriptTab:AddButton({
-    Name = " | Blade ball",
-    Callback = function()
-        loadstring(game:HttpGet(""))()
-    end
-})
-
-local OurScriptTab = Window:MakeTab({
-    Name = "Our Scripts",
-    Icon = "rbxassetid://18675246284",
-    PremiumOnly = false
 })
 
 OurScriptTab:AddButton({
